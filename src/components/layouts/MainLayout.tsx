@@ -3,7 +3,7 @@ import Header from './Header';
 
 function MainLayout() {
   return (
-    <div>
+    <div className='rubik-fontFamily'>
       <Header />
       <Outlet />
     </div>

@@ -73,3 +73,16 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
 }
+.text-outline {
+  -webkit-text-stroke: 1px #ffffff;
+}
+.text-outline-hover {
+  -webkit-text-stroke: 1px #00ff99;
+}
+
+.rubik-fontFamily {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
