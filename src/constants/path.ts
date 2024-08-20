@@ -1,7 +1,7 @@
 export const PATH_ROUTES = {
   Home: '/',
   Services: '/services',
-  Work: '/work',
+  Projects: '/projects',
   Resume: '/resume',
   Contact: '/contact',
 };
