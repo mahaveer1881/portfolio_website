@@ -1,5 +1,6 @@
 import MainLayout from '@/components/layouts/MainLayout';
 import { PATH_ROUTES } from '@/constants/path';
+import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Home from '@/pages/Home';
 import Projects from '@/pages/Projects';
@@ -22,4 +23,5 @@ const routes = [
   { path: PATH_ROUTES.Contact, element: <Contact /> },
   { path: PATH_ROUTES.Projects, element: <Projects /> },
   { path: PATH_ROUTES.Resume, element: <Resume /> },
+  { path: PATH_ROUTES.About, element: <About /> },
 ];

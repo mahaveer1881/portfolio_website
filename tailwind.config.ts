@@ -25,7 +25,8 @@ const config = {
     },
     extend: {
       colors: {
-        primary: '#1E1E1E',
+        // primary: '#1E1E1E',
+        primary: '#012345',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -44,7 +45,8 @@ const config = {
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: '#00BCD4',
+          // DEFAULT: '#00BCD4',
+          DEFAULT: '#00BFFF',
           hover: '#008C95',
         },
         popover: {

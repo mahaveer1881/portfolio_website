@@ -1,16 +1,18 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { getExperienceTime, getExperienceYear } from '@/utils';
 import CountUp from 'react-countup';
 
 const stats = [
-  { num: 1, text: 'Years of experience' },
+  { num: getExperienceYear(), text: 'Years of experience' },
   { num: 3, text: 'Projects completed' },
   { num: 5, text: 'Technologies mastered' },
-  { num: 400, text: 'Code commits' },
+  { num: 400, text: 'Code Commits' },
 ];
 
 const Stats = () => {
+  console.log(getExperienceTime());
   return (
     <section className='pt-4 pb-12 xl:pt-0 xl:pb-0'>
       <div className='container mx-auto'>
@@ -22,7 +24,7 @@ const Stats = () => {
                 key={index}
               >
                 <CountUp
-                  end={item.num}
+                  end={Number(item.num)}
                   duration={5}
                   delay={2}
                   className='text-3xl xl:text-6xl font-extrabold'

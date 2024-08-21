@@ -2,14 +2,8 @@ import { CiMenuFries } from 'react-icons/ci';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { NAVBAR_LINKS } from '@/constants/data';
 
-const links = [
-  { name: 'home', path: '/' },
-  { name: 'services', path: '/services' },
-  { name: 'resume', path: '/resume' },
-  { name: 'projects', path: '/projects' },
-  { name: 'contact', path: '/contact' },
-];
 function MobileNav() {
   const location = useLocation();
   const pathName = location.pathname;
@@ -28,7 +22,7 @@ function MobileNav() {
         </div>
 
         <nav className='flex flex-col justify-center items-center gap-8'>
-          {links.map((link, index) => {
+          {NAVBAR_LINKS.map((link, index) => {
             return (
               <Link
                 to={link.path}

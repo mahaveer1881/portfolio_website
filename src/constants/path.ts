@@ -4,4 +4,5 @@ export const PATH_ROUTES = {
   Projects: '/projects',
   Resume: '/resume',
   Contact: '/contact',
+  About: '/about',
 };

@@ -1,0 +1,12 @@
+//content to show in about page:
+1. about my self one paragraph.
+2. my education details
+3. my photo
+4. 
+
+in about page 
+for upper half
+left side will show about me some paragraph then in right side my photo
+
+for lower half:
+there will be one heading as my education and then 

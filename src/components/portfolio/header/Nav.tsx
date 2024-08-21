@@ -1,20 +1,13 @@
+import { NAVBAR_LINKS } from '@/constants/data';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
-
-const links = [
-  { name: 'home', path: '/' },
-  { name: 'services', path: '/services' },
-  { name: 'resume', path: '/resume' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'contact', path: '/contact' },
-];
 
 function Nav() {
   const location = useLocation();
   const pathName = location.pathname;
   return (
     <nav className='flex gap-8'>
-      {links.map((link, index) => {
+      {NAVBAR_LINKS.map((link, index) => {
         return (
           <Link
             key={index}
