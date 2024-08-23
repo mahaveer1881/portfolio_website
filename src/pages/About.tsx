@@ -1,33 +1,72 @@
-import { getExperienceTime } from '@/utils';
+import { Button } from '@/components/ui/button';
+import { FiDownload } from 'react-icons/fi';
+import AboutImg from '@/components/portfolio/about/AboutImg';
+import EducationSection from '@/components/portfolio/about/EducationSection';
+import SkillsSection from '@/components/portfolio/about/SkillsSection';
+import { useNavigate } from 'react-router-dom';
+import { PATH_ROUTES } from '@/constants/path';
+import { cn } from '@/lib/utils';
+import { about } from '@/constants/about';
+import Socials from '@/components/portfolio/Socials';
 
 function About() {
+  const navigate = useNavigate();
   return (
     <div className='container mx-auto h-full'>
-      <h1 className='text-4xl'>About me</h1>
-      <div className='grid grid-cols-2'>
-        <div className='cols-span-1'>
-          <h3>Software Developer</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit nobis
-            omnis pariatur possimus libero ullam mollitia quod! Id quam
-            perspiciatis eveniet iste. Molestiae illo eos quae earum, voluptatum
-            quisquam praesentium est odio et cupiditate iure nisi eveniet eaque
-            laborum natus.
+      <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-20 text-center xl:text-start pt-12 xl:pt-0'>
+        About Me
+      </h1>
+      <div className='flex flex-col xl:flex-row items-center justify-between -mt-8 xl:-mt-14 xl:pb-1'>
+        <div className='order-2 xl:order-none '>
+          <div className='flex flex-col xl:items-start gap-[30px] pb-10'>
+            <ul className='flex flex-col gap-y-2 mx-auto xl:mx-0'>
+              {about.info.map((item, index) => (
+                <li
+                  key={index}
+                  className='flex items-center justify-start xl:justify-start gap-4'
+                >
+                  <span className='text-white/60'>{item.fieldName}</span>
+                  <span
+                    className={cn(
+                      'text-base sm:text-xl flex flex-wrap items-start justify-start'
+                    )}
+                  >
+                    {item.fieldValue}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className='mt-4 text-white text-center xl:text-start px-4 lg:px-20 xl:px-0'>
+            {about.desc}
           </p>
+          <Button
+            variant='outline'
+            size='lg'
+            className='uppercase flex items-center gap-2 mt-10 mx-auto xl:mx-0'
+          >
+            <span>Download CV</span>
+            <FiDownload className='text-xl' />
+          </Button>
         </div>
-        <div>
-          <img src='' alt='profile/pic' />
+        <div className='order-1 xl:order-none'>
+          <AboutImg />
         </div>
       </div>
-      <div className='pt-10'>
-        <h1>My Education</h1>
-        <div>hello</div>
-      </div>
-      <div className='flex justify-center items-center gap-10'>
-        Total Experience:
-        <span className='text-xl xl:text-2xl font-extrabold'>
-          {getExperienceTime()}
-        </span>
+      <EducationSection />
+      <SkillsSection />
+      <button
+        type='button'
+        onClick={() => navigate(PATH_ROUTES.Projects)}
+        className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-8 cursor-pointer mx-auto'
+      >
+        Let's walk through my Projects...
+      </button>
+      <div className='flex justify-center pt-6 pb-10'>
+        <Socials
+          containerStyles='flex gap-6'
+          iconStyles='w-9 h-9 border-accent rounded-full flex justify-center items-center text-accent text-3xl hover:bg-accent hover:text-primary hover:transition-all duration-500 '
+        />
       </div>
     </div>
   );

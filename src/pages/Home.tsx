@@ -3,6 +3,8 @@ import Stats from '@/components/portfolio/home/Stats';
 import Socials from '@/components/portfolio/Socials';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
+import About from './About';
+import { homePage } from '@/constants/home';
 
 export default function Home() {
   return (
@@ -10,15 +12,12 @@ export default function Home() {
       <div className='container mx-auto h-full'>
         <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-4 xl:pb-1'>
           <div className='text-center xl:text-left order-2 xl:order-none'>
-            <span>Software Developer</span>
+            <span>{homePage.title}</span>
             <h1 className='h1 mb-6'>
               Hello I'm <br />{' '}
-              <span className='text-accent shadow-lg'>Mahaveer Singh</span>
+              <span className='text-accent'>{homePage.name}</span>
             </h1>
-            <p className='max-w-[500px] mb-9 text-white/80'>
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
-            </p>
+            <p className='max-w-[500px] mb-9 text-white/80'>{homePage.desc} </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
               <Button
                 variant='outline'
@@ -42,6 +41,7 @@ export default function Home() {
         </div>
       </div>
       <Stats />
+      <About />
     </section>
   );
 }
