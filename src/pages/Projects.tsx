@@ -27,7 +27,12 @@ function Projects() {
         </p>
         {/* <ProjectsHeaders /> */}
         {projects.map((project) => (
-          <div className='flex flex-col xl:flex-row xl:gap-[30px] bg-card m-8 p-10 rounded-xl'>
+          <div
+            style={{
+              background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
+            }}
+            className='flex flex-col xl:flex-row xl:gap-[30px] bg-card m-8 p-10 rounded-xl'
+          >
             <div className='w-full xl:w-[50%] xl:h-[420px] flex flex-col xl:justify-between order-2 xl:order-none -mt-8 xl:mt-0'>
               <div className='flex flex-col gap-[30px] h-[50%]'>
                 <div className='text-5xl pt-2 md:pt-0 md:text-6xl leading-none font-extrabold text-transparent text-outline'>

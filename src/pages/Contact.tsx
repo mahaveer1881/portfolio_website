@@ -10,7 +10,12 @@ function Contact() {
     <div className='container mmx-auto py-6'>
       <div className='flex flex-col xl:flex-row gap-[30px]'>
         <div className='xl:w-[54%] order-2 xl:order-none '>
-          <form className='flex flex-col gap-4 p-10  bg-[#001D34] rounded-xl'>
+          <form
+            style={{
+              background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
+            }}
+            className='flex flex-col gap-4 p-10 rounded-xl'
+          >
             <h3 className='text-4xl text-accent '>Let's work together</h3>
             <p className='text-white/60'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
@@ -40,7 +45,12 @@ function Contact() {
             {contactInfo.map((item, index) => {
               return (
                 <li key={index} className='flex items-center gap-6'>
-                  <div className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#001D34] text-accent rounded-md flex items-center justify-center'>
+                  <div
+                    style={{
+                      background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
+                    }}
+                    className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] text-accent rounded-md flex items-center justify-center'
+                  >
                     <div className='text-[28px]'>
                       <item.icon />
                     </div>

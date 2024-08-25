@@ -4,7 +4,7 @@ import { ISourceOptions, MoveDirection, OutMode } from '@tsparticles/engine';
 const ParticlesConfig = (): ISourceOptions => ({
   background: {
     color: {
-      value: '#012345',
+      value: '#10131a',
     },
   },
   fpsLimit: 60,

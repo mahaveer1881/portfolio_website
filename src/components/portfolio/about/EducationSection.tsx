@@ -12,7 +12,12 @@ function EducationSection() {
             {education.desc}
           </p>
           <ul className='w-full md:w-3/4 lg:w-1/2'>
-            <li className='bg-[#001D34] h-[184px] py-6 px-2 md:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 '>
+            <li
+              style={{
+                background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
+              }}
+              className='bg-card h-[184px] py-6 px-2 md:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 '
+            >
               <span className='text-accent'>{education.info.duration}</span>
               <h3 className='text-xl min-h-[60px] text-center lg:text-left'>
                 {education.info.degree}

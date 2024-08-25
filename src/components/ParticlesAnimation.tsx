@@ -20,6 +20,9 @@ const ParticlesAnimation = () => {
   if (init) {
     return (
       <Particles
+        style={{
+          background: `#10131a`,
+        }}
         id='tsparticles'
         particlesLoaded={particlesLoaded}
         options={ParticlesConfig()}

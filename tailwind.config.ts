@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -25,8 +25,7 @@ const config = {
     },
     extend: {
       colors: {
-        // primary: '#1E1E1E',
-        primary: '#012345',
+        primary: '#10131a',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -45,8 +44,7 @@ const config = {
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          // DEFAULT: '#00BCD4',
-          DEFAULT: '#00BFFF',
+          DEFAULT: '#00FFD5',
           hover: '#008C95',
         },
         popover: {
@@ -54,7 +52,9 @@ const config = {
           foreground: 'hsl(var(--popover-foreground))',
         },
         card: {
-          DEFAULT: '#001D34',
+          // DEFAULT: '#fff',
+          DEFAULT:
+            'radial-gradient(farthest-corner at center, #10131a 30%, #0d2f3d 60%, #0d2f3d 100%)',
           foreground: 'hsl(var(--card-foreground))',
         },
       },
@@ -95,3 +95,6 @@ export default config;
 // Primary Text Color: Dark Gray (#404040)
 // Accent Color: Cyan (#00BCD4)
 // Hover Accent Color: Dark Cyan (#008C95)
+
+//new theme:
+// for Highlight : // #C0C0C0;

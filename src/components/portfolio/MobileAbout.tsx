@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
-import AboutImg from '@/components/portfolio/about/AboutImg';
 import EducationSection from '@/components/portfolio/about/EducationSection';
 import SkillsSection from '@/components/portfolio/about/SkillsSection';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { about } from '@/constants/about';
 import Socials from '@/components/portfolio/Socials';
 
-function About() {
+function MobileAbout() {
   const navigate = useNavigate();
   return (
     <div className='container mx-auto h-full'>
@@ -17,7 +16,7 @@ function About() {
         About Me
       </h1>
       <div className='flex flex-col xl:flex-row items-center justify-between -mt-8 xl:-mt-10 xl:pb-1 xl:gap-28'>
-        <div className='order-2 xl:order-none '>
+        <div>
           <div className='flex flex-col xl:items-start gap-[30px] pb-10'>
             <ul className='flex flex-col gap-y-2 mx-auto xl:mx-0'>
               {about.info.map((item, index) => (
@@ -49,9 +48,6 @@ function About() {
             <FiDownload className='text-xl' />
           </Button>
         </div>
-        <div className='order-1 xl:order-none'>
-          <AboutImg />
-        </div>
       </div>
       <EducationSection />
       <SkillsSection />
@@ -71,4 +67,4 @@ function About() {
     </div>
   );
 }
-export default About;
+export default MobileAbout;

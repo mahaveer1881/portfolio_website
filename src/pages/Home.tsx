@@ -3,8 +3,8 @@ import Stats from '@/components/portfolio/home/Stats';
 import Socials from '@/components/portfolio/Socials';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
-import About from './About';
 import { homePage } from '@/constants/home';
+import MobileAbout from '@/components/portfolio/MobileAbout';
 
 export default function Home() {
   return (
@@ -41,7 +41,9 @@ export default function Home() {
         </div>
       </div>
       <Stats />
-      <About />
+      <div className='xl:hidden'>
+        <MobileAbout />
+      </div>
     </section>
   );
 }
