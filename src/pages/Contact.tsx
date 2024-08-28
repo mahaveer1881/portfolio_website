@@ -93,7 +93,7 @@ function Contact() {
       <button
         type='button'
         onClick={() => navigate(PATH_ROUTES.ABOUT)}
-        className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto'
+        className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto xl:hidden'
       >
         Learn More About me...
       </button>
