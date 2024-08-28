@@ -18,10 +18,10 @@ export const getRouter = () => {
 };
 
 const routes = [
-  { path: PATH_ROUTES.Home, element: <Home /> },
-  { path: PATH_ROUTES.Services, element: <Services /> },
-  { path: PATH_ROUTES.Contact, element: <Contact /> },
-  { path: PATH_ROUTES.Projects, element: <Projects /> },
-  { path: PATH_ROUTES.Experience, element: <Experience /> },
-  { path: PATH_ROUTES.About, element: <About /> },
+  { path: PATH_ROUTES.HOME, element: <Home /> },
+  { path: PATH_ROUTES.SERVICES, element: <Services /> },
+  { path: PATH_ROUTES.CONTACT, element: <Contact /> },
+  { path: PATH_ROUTES.PROJECTS, element: <Projects /> },
+  { path: PATH_ROUTES.EXPERIENCE, element: <Experience /> },
+  { path: PATH_ROUTES.ABOUT, element: <About /> },
 ];

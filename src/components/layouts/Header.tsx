@@ -1,3 +1,4 @@
+import { PATH_ROUTES } from '@/constants/path';
 import MobileNav from '../portfolio/header/MobileNav';
 import Nav from '../portfolio/header/Nav';
 import { Button } from '../ui/button';
@@ -16,7 +17,7 @@ function Header() {
           {/* desktop nav */}
           <div className='hidden xl:flex items-center gap-8'>
             <Nav />
-            <Link to='/contact'>
+            <Link to={PATH_ROUTES.CONTACT}>
               <Button className='border-2'>Hire me</Button>
             </Link>
           </div>

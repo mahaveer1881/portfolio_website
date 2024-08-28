@@ -3,14 +3,22 @@ import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { NAVBAR_LINKS } from '@/constants/data';
+import { useState } from 'react';
+import { PATH_ROUTES } from '@/constants/path';
+import { Button } from '@/components/ui/button';
 
 function MobileNav() {
   const location = useLocation();
   const pathName = location.pathname;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <Sheet>
+    <Sheet open={isOpen}>
       <SheetTrigger className='flex justify-center items-center'>
-        <CiMenuFries className='text-[32px] text-accent' />
+        <CiMenuFries
+          onClick={() => setIsOpen(true)}
+          className='text-[32px] text-accent'
+        />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
         <div className='mt-24 mb-10 text-center text-2xl'>
@@ -21,22 +29,26 @@ function MobileNav() {
           </Link>
         </div>
 
-        <nav className='flex flex-col justify-center items-center gap-8'>
+        <nav className='flex flex-col justify-between items-center gap-8'>
           {NAVBAR_LINKS.map((link, index) => {
             return (
               <Link
                 to={link.path}
                 key={index}
                 className={cn(
-                  'text-xl capitalize hover:text-accent transition-all',
+                  'text-xl capitalize hover:text-accent transition-all duration-300',
                   link.path === pathName &&
                     'text-accent border-b-2 border-accent'
                 )}
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             );
           })}
+          <Link onClick={() => setIsOpen(false)} to={PATH_ROUTES.CONTACT}>
+            <Button className='border-2'>Hire me</Button>
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>

@@ -3,9 +3,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { contactInfo } from '@/constants/contact';
+import { PATH_ROUTES } from '@/constants/path';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 function Contact() {
+  const navigate = useNavigate();
   return (
     <div className='container mmx-auto py-6'>
       <div className='flex flex-col xl:flex-row gap-[30px]'>
@@ -76,10 +79,24 @@ function Contact() {
                 containerStyles='flex gap-6'
                 iconStyles='w-10 h-10 border-accent rounded-full flex justify-center items-center text-accent text-3xl hover:bg-accent hover:text-primary hover:transition-all duration-500 '
               />
+              <button
+                type='button'
+                onClick={() => navigate(PATH_ROUTES.ABOUT)}
+                className='flex ml-10 justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto'
+              >
+                Learn More About me...
+              </button>
             </div>
           </ul>
         </div>
       </div>
+      <button
+        type='button'
+        onClick={() => navigate(PATH_ROUTES.ABOUT)}
+        className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto'
+      >
+        Learn More About me...
+      </button>
       <div className='flex justify-center pt-10 xl:hidden'>
         <Socials
           containerStyles='flex gap-6'

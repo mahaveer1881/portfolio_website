@@ -13,7 +13,7 @@ function About() {
   const navigate = useNavigate();
   return (
     <div className='container mx-auto h-full'>
-      <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-20 text-center xl:text-start pt-12 xl:pt-0'>
+      <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-20 text-center xl:text-start pt-12 xl:pt-10'>
         About Me
       </h1>
       <div className='flex flex-col xl:flex-row items-center justify-between -mt-8 xl:-mt-10 xl:pb-1 xl:gap-28'>
@@ -57,7 +57,7 @@ function About() {
       <SkillsSection />
       <button
         type='button'
-        onClick={() => navigate(PATH_ROUTES.Projects)}
+        onClick={() => navigate(PATH_ROUTES.PROJECTS)}
         className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-8 cursor-pointer mx-auto'
       >
         Let's walk through my Projects...

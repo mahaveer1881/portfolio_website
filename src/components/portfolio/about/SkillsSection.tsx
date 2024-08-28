@@ -1,11 +1,7 @@
-import { useState } from 'react';
-
 import Icon from '../Icon';
 import { skills } from '@/constants/about';
 
 function SkillsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  console.log(hoveredIndex);
   return (
     <div className='py-20'>
       <div className='flex flex-col gap-[30px]'>
@@ -21,8 +17,6 @@ function SkillsSection() {
                   style={{
                     background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
                   }}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
                   className='w-full h-[150px] rounded-xl flex justify-center items-center group'
                 >
                   <div className='text-6xl group-hover:text-accent transition-all duration-300'>

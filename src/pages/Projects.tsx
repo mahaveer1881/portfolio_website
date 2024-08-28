@@ -91,7 +91,7 @@ function Projects() {
         </div> */}
         <button
           type='button'
-          onClick={() => navigate(PATH_ROUTES.Contact)}
+          onClick={() => navigate(PATH_ROUTES.CONTACT)}
           className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto'
         >
           Let's work together...
