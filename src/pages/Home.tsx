@@ -15,7 +15,7 @@ export default function Home() {
             <span>{homePage.title}</span>
             <h1 className='h1 mb-6'>
               Hello I'm <br />{' '}
-              <span className='text-accent'>{homePage.name}</span>
+              <span className='text-accent text-shadow'>{homePage.name}</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white/80'>{homePage.desc} </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>

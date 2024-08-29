@@ -10,7 +10,12 @@ function Header() {
       <header className='py-8 xl:py-10 text-white'>
         <div className='container mx-auto flex justify-between items-center'>
           <Link to='/'>
-            <h1 className='text-4xl font-semibold'>
+            <h1
+              className='text-4xl font-semibold text-[#01C3A4]'
+              // style={{
+              //   color: 'linear-gradient(center, #00FFD5, #6A0D91)',
+              // }}
+            >
               Mahaveer<span className='text-accent'>.</span>
             </h1>
           </Link>

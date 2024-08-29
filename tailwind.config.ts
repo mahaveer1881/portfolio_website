@@ -45,7 +45,7 @@ const config: Config = {
         },
         accent: {
           DEFAULT: '#00FFD5',
-          hover: '#008C95',
+          hover: '#01C3A4',
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
@@ -77,9 +77,26 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      boxShadow: {
+        'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      },
+      textShadow: {
+        custom: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          '.text-shadow': {
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+          },
+        },
+        ['responsive', 'hover']
+      );
+    },
+  ],
 } satisfies Config;
 
 export default config;

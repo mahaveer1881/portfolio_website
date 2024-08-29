@@ -24,7 +24,7 @@ export const education = {
   title: 'My Education',
   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium neque,  dolor sit amet consectetur adipisicing elit. Enim praesentium neque,  dolor sit amet consectetur adipisicing elit. Enim praesentium neque, ipsam cumque repellat consequatur tenetur quae ad in id.',
   info: {
-    duration: 'August 2023 - June 2024',
+    duration: 'August 2019 - June 2023',
     degree: ' Btech (Chemical Engineering)',
     institute_name: 'Indian Institute of Technology, Tirupati (India)',
   },

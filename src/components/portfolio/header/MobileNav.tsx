@@ -6,6 +6,7 @@ import { NAVBAR_LINKS } from '@/constants/data';
 import { useState } from 'react';
 import { PATH_ROUTES } from '@/constants/path';
 import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 
 function MobileNav() {
   const location = useLocation();
@@ -21,8 +22,9 @@ function MobileNav() {
         />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
-        <div className='mt-24 mb-10 text-center text-2xl'>
-          <Link to='/'>
+        <X className='text-3xl text-accent' onClick={() => setIsOpen(false)} />
+        <div className='mt-12 mb-10 text-center text-2xl'>
+          <Link to={PATH_ROUTES.HOME}>
             <h1 className='text-4xl font-semibold'>
               Mahaveer <span className='text-accent'>.</span>
             </h1>
