@@ -38,8 +38,16 @@ function About() {
             </ul>
           </div>
           <p className='mt-4 text-white text-center xl:text-start px-4 lg:px-20 xl:px-0'>
-            {about.desc}
+            {about.homepageDesc}
           </p>
+          <div>
+            <h1 className='text-2xl underline italic pt-10 text-center'>
+              My Journey
+            </h1>
+            <p className='mt-4 text-white text-center xl:text-start px-4 lg:px-20 xl:px-0'>
+              {about.desc}
+            </p>
+          </div>
           <Button
             variant='outline'
             size='lg'

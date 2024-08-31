@@ -19,7 +19,7 @@ function Projects() {
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-10 xl:mb-20 text-center xl:text-start pt-8 xl:pt-12 xl:pt-0'>
           My Projects
         </h1>
-        <p>
+        <p className=''>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
           dolore maxime voluptatum accusamus repellendus optio porro a atque,
           culpa natus totam praesentium omnis officia hic illum exercitationem,
@@ -31,7 +31,7 @@ function Projects() {
             style={{
               background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
             }}
-            className='flex flex-col xl:flex-row xl:gap-[30px] bg-card m-8 p-10 rounded-xl'
+            className='flex flex-col xl:flex-row xl:gap-[30px] mx-2 my-8 xl:m-8 p-10 rounded-xl'
           >
             <div className='w-full xl:w-[50%] xl:h-[420px] flex flex-col xl:justify-between order-2 xl:order-none -mt-8 xl:mt-0'>
               <div className='flex flex-col gap-[30px] h-[50%]'>

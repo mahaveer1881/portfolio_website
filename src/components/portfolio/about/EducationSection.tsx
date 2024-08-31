@@ -7,11 +7,18 @@ function EducationSection() {
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-20 text-center xl:text-start'>
           {education.title}
         </h1>
-        <div className='flex flex-col lg:flex-row justify-between items-center gap-10 xl:gap-40 '>
-          <p className='w-full lg:w-1/2 px-4 text-center xl:text-start '>
-            {education.desc}
-          </p>
-          <ul className='w-full md:w-3/4 lg:w-1/2'>
+        <div className='flex flex-col lg:flex-row justify-between items-center gap-10 xl:gap-20 '>
+          <div className='w-full'>
+            <p className='w-full px-4 text-center xl:text-start '>
+              {education.homePageDesc}
+            </p>
+            <br />
+            <p className='hidden w-full px-4 text-center xl:text-start'>
+              {education.desc}
+            </p>
+          </div>
+
+          <ul className='w-full md:w-3/4 lg:w-3/4'>
             <li
               style={{
                 background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,

@@ -36,12 +36,12 @@ function MobileAbout() {
             </ul>
           </div>
           <p className='mt-4 text-white text-center xl:text-start px-4 lg:px-20 xl:px-0'>
-            {about.desc}
+            {about.homepageDesc}
           </p>
           <div className='mt-24 mb-16'>
             <div className=' gap-10'>
-              <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-20 text-center xl:text-start'>
-                Current Company
+              <h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold mb-20 text-center xl:text-start'>
+                Presently Working At
               </h1>
               <ul className='w-full md:w-3/4 lg:w-1/2 mx-auto'>
                 <li
