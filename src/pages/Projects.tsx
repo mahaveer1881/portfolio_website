@@ -6,7 +6,6 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { Link, useNavigate } from 'react-router-dom';
-import projectImg from '@/assets/project_1.png';
 import { projects } from '@/constants/projects';
 import { PATH_ROUTES } from '@/constants/path';
 import Socials from '@/components/portfolio/Socials';
@@ -31,18 +30,21 @@ function Projects() {
             style={{
               background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
             }}
-            className='flex flex-col xl:flex-row xl:gap-[30px] mx-2 my-8 xl:m-8 p-10 rounded-xl'
+            className='flex flex-col xl:flex-row xl:gap-[30px] mx-2 my-8 xl:m-8 p-4 md:p-10 rounded-xl'
           >
             <div className='w-full xl:w-[50%] xl:h-[420px] flex flex-col xl:justify-between order-2 xl:order-none -mt-8 xl:mt-0'>
               <div className='flex flex-col gap-[30px] h-[50%]'>
                 <div className='text-5xl pt-2 md:pt-0 md:text-6xl leading-none font-extrabold text-transparent text-outline'>
                   {project.num}
                 </div>
-                <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
+                {/* <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
                   {project.category}
+                </h2> */}
+                <h2 className='text-[18px] md:text-[25px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize text-center sm:text-start'>
+                  {project.title}
                 </h2>
                 <p className='text-white/60'>{project.desc}</p>
-                <ul className='flex gap-4'>
+                <ul className='flex flex-wrap gap-4'>
                   {project.stack.map((st, index) => {
                     return (
                       <li key={index} className='text-xl text-accent'>
@@ -56,7 +58,10 @@ function Projects() {
               </div>
             </div>
             <div className='w-full xl:w-[50%] rounded-xl'>
-              <img src={projectImg} className='rounded-3xl' />
+              <img
+                src={project.image}
+                className='rounded-3xl contain h-[180px] w-[280px] md:h-[280px] md:w-[500px] xl:w-full mx-auto'
+              />
               <div className='relative top-6 flex justify-end items-center gap-4 xl:pt-6'>
                 <Link to={project.live}>
                   <TooltipProvider delayDuration={100}>
