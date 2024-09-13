@@ -1,6 +1,8 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 // import { getExperienceYear } from '@/utils';
 import CountUp from 'react-countup';
 
@@ -13,14 +15,29 @@ const stats = [
 ];
 
 const Stats = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      '.stats',
+      {
+        opacity: 0,
+        y: 60,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1,
+        stagger: 0.1,
+      }
+    );
+  }, []);
   return (
     <section className='mt-12 pb-12 xl:pt-0 xl:pb-0'>
       <div className='container mx-auto'>
-        <div className='flex flex-wrap gap-6 max-w-[90vw] mx-auto xl:max-w-none'>
+        <div className='stats flex flex-wrap gap-6 max-w-[90vw] mx-auto xl:max-w-none'>
           {stats.map((item, index) => {
             return (
               <div
-                className='flex-1 flex gap-4 items-center justify-center xl:justify-start'
+                className='stats flex-1 flex gap-4 items-center justify-center xl:justify-start'
                 key={index}
               >
                 <CountUp
@@ -31,7 +48,7 @@ const Stats = () => {
                 />
                 <p
                   className={cn(
-                    'leading-snug text-secondary/80',
+                    'stats leading-snug text-secondary/80',
                     item.text.length < 13 ? 'max-w-[100px]' : 'max-w-[150px]'
                   )}
                 >

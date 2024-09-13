@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import { ScrollArea } from '../ui/scroll-area';
 import ScrollToTop from '../portfolio/ScrollToTop';
 
 function MainLayout() {
+  const navigate = useNavigate();
   return (
     <div className='rubik-fontFamily'>
       <Header />
@@ -16,7 +17,14 @@ function MainLayout() {
           work.
           <br />
           *** Please check back soon for the latest updates. If you have any
-          questions or want to discuss a project, feel free to contact me.
+          questions or want to discuss a project, feel free to{' '}
+          <span
+            className='italic text-accent border-b cursor-pointer'
+            onClick={() => navigate('/contact')}
+          >
+            contact me
+          </span>
+          .
         </p>
       </ScrollArea>
     </div>
