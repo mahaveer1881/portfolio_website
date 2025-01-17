@@ -19,7 +19,8 @@ export default function Home() {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
+        delay: 0.5,
+        duration: 2,
         stagger: 0.1,
       }
     );
@@ -32,7 +33,8 @@ export default function Home() {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
+        delay: 0.5,
+        duration: 2,
         stagger: 0.1,
       }
     );

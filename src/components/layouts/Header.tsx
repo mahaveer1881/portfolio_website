@@ -35,11 +35,6 @@ function Header() {
           {/* desktop nav */}
           <div className='hidden xl:flex items-center gap-8'>
             <Nav />
-            <Link id='hire' to={PATH_ROUTES.CONTACT}>
-              <Button className='border-2 opacity-1 translate-x '>
-                Hire me
-              </Button>
-            </Link>
           </div>
           {/* movile nav */}
           <div id='mob' className='xl:hidden'>
