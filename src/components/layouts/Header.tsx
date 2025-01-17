@@ -1,7 +1,5 @@
-import { PATH_ROUTES } from '@/constants/path';
 import MobileNav from '../portfolio/header/MobileNav';
 import Nav from '../portfolio/header/Nav';
-import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
