@@ -3,6 +3,7 @@ import Nav from '../portfolio/header/Nav';
 import { Link } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { Moon, Sun } from 'lucide-react';
 
 function Header() {
   useGSAP(() => {
@@ -17,23 +18,36 @@ function Header() {
   }, []);
   return (
     <div>
-      <header className='py-8 xl:py-10 text-white'>
-        <div className='container mx-auto flex justify-between items-center'>
+      <header className='py-6 xl:py-4 text-white bg-black'>
+        <div className='mx-10 flex justify-between items-center'>
           <Link to='/'>
             <h1
               id='logo'
-              className='opacity-1 translate-x text-4xl font-semibold text-[#01C3A4]'
-              // style={{
-              //   color: 'linear-gradient(center, #00FFD5, #6A0D91)',
-              // }}
+              className='opacity-1 translate-x text-xl font-semibold text-[#01C3A4]'
             >
               Mahaveer<span className='text-accent'>.</span>
             </h1>
           </Link>
+
+          {/* theme change button */}
+          <div>
+            {true ? (
+              <button className='bg-blue-700 p-2 rounded-full'>
+                <Sun className='font-semibold' />
+              </button>
+            ) : (
+              <button className='bg-blue-700 p-2 rounded-full'>
+                <Moon className='font-semibold' />
+              </button>
+            )}
+          </div>
+        </div>
+        <div className='flex justify-center items-center -mt-10'>
           {/* desktop nav */}
           <div className='hidden xl:flex items-center gap-8'>
             <Nav />
           </div>
+
           {/* movile nav */}
           <div id='mob' className='xl:hidden'>
             <MobileNav />
