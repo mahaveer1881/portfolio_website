@@ -1,28 +1,44 @@
 import HomePageBg from '@/assets/home_page_bg.png';
 import Socials from '../Socials';
 import { Download } from 'lucide-react';
-import profile from '@/assets/profile.jpeg';
+import profile1 from '@/assets/profile_img.jpeg';
+import resumeFile from '@/assets/my_resume_copy.pdf';
 
 function Profile() {
+  const handleResume = () => {
+    const link = document.createElement('a');
+    link.href = resumeFile;
+    link.download = 'mahaveer_resume';
+    link.click();
+  };
   return (
     <div>
       <div className='overlfow-hidden'>
         <img
           src={HomePageBg}
-          className='w-full h-72 object-cover object-top '
+          className='w-full md:h-72 h-52 object-cover object-top '
         />
       </div>
 
-      <div className='rounded-full w-[160px] mx-auto -mt-24 z-50'>
+      <div className='rounded-full md:w-[160px] w-[120px] mx-auto md:-mt-24 -mt-16  z-50'>
         <img
-          src={profile}
-          className='w-[160px] h-[160px] object-cover rounded-full bg-gred-600 '
+          src={profile1}
+          className='md:w-[160px] md:h-[160px] w-[120px] h-[120px] object-cover rounded-full bg-gred-600 '
         />
       </div>
       <div className='w-[80%] mx-auto flex flex-col items-center justify-center mt-6'>
-        <p className='text-3xl font-semibold'>Mahaveer Singh Gurjar</p>
-        <p className='mt-2'>
-          Full Stack Developer at <span>AIML Opendatafabric</span>{' '}
+        <p className='sm:text-3xl text-2xl font-semibold text-center'>
+          Mahaveer Singh Gurjar
+        </p>
+        <p className='mt-2 text-center'>
+          Full Stack Developer at{' '}
+          <a
+            className='hover:text-accent-hover'
+            href='https://www.opendatafabric.com/'
+            target='blank'
+          >
+            AIML Opendatafabric
+          </a>{' '}
         </p>
         <div className='homepage my-2'>
           <Socials
@@ -30,13 +46,16 @@ function Profile() {
             iconStyles='w-9 h-9 border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500 '
           />
         </div>
-        <p className='w-[70%] text-center'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          praesentium enim inventore aspernatur excepturi, autem totam nemo sunt
-          corrupti qui?
+        <p className='md:w-[70%] w-[98%] text-center'>
+          I’m a Full Stack Developer, graduated from IIT Tirupati. I started
+          with Frontend Development and now build end-to-end solutions. Always
+          exploring new technologies and eager for new challenges.
         </p>
         <div>
-          <button className='flex justify-center items-center gap-2 py-2 px-4 text-base text-white/80 bg-gray-800 border-2 border-white/10 rounded-lg mt-10'>
+          <button
+            onClick={handleResume}
+            className='flex justify-center items-center gap-2 py-2 px-4 text-base text-white/80 bg-gray-800 border-2 border-white/10 rounded-lg mt-10'
+          >
             <span>
               <Download className='w-4 h-4 ' />
             </span>

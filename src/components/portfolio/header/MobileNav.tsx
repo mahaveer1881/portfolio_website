@@ -5,7 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { NAVBAR_LINKS } from '@/constants/data';
 import { useState } from 'react';
 import { PATH_ROUTES } from '@/constants/path';
-import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
 function MobileNav() {
@@ -18,14 +17,14 @@ function MobileNav() {
       <SheetTrigger className='flex justify-center items-center'>
         <CiMenuFries
           onClick={() => setIsOpen(true)}
-          className='text-[32px] text-accent'
+          className='text-[25px] text-accent'
         />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
         <X className='text-3xl text-accent' onClick={() => setIsOpen(false)} />
         <div className='mt-12 mb-10 text-center text-2xl'>
           <Link to={PATH_ROUTES.HOME}>
-            <h1 className='text-4xl font-semibold'>
+            <h1 className='text-2xl font-semibold'>
               Mahaveer <span className='text-accent'>.</span>
             </h1>
           </Link>
@@ -48,9 +47,6 @@ function MobileNav() {
               </Link>
             );
           })}
-          <Link onClick={() => setIsOpen(false)} to={PATH_ROUTES.CONTACT}>
-            <Button className='border-2'>Hire me</Button>
-          </Link>
         </nav>
       </SheetContent>
     </Sheet>
