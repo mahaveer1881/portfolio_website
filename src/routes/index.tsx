@@ -6,7 +6,7 @@ import Experience from '@/pages/Experience';
 import Home from '@/pages/Home';
 import Projects from '@/pages/Projects';
 import Services from '@/pages/Services';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 export const getRouter = () => {
   return createBrowserRouter([
@@ -24,4 +24,9 @@ const routes = [
   { path: PATH_ROUTES.PROJECTS, element: <Projects /> },
   { path: PATH_ROUTES.EXPERIENCE, element: <Experience /> },
   { path: PATH_ROUTES.ABOUT, element: <About /> },
+
+  {
+    path: PATH_ROUTES.SITEMAP,
+    element: <Navigate to='/sitemap.xml' replace />,
+  },
 ];

@@ -5,4 +5,5 @@ export const PATH_ROUTES = {
   EXPERIENCE: '/experience',
   CONTACT: '/contact',
   ABOUT: '/about',
+  SITEMAP: 'sitemap.xml',
 };
