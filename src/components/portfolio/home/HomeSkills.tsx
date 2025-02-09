@@ -55,7 +55,7 @@ const hobbies = [
 
 function HomeSkills() {
   return (
-    <div className='lg:w-[50%] md:w-[70%] w-[90%] mx-auto mt-40'>
+    <div className='lg:w-[60%] md:w-[70%] w-[90%] mx-auto mt-40'>
       <Link
         to={PATH_ROUTES.ABOUT}
         className='flex justify-center items-center gap-4'
