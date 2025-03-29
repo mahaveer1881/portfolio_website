@@ -1,113 +1,97 @@
-import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { Link, useNavigate } from 'react-router-dom';
-import { projects } from '@/constants/projects';
-import { PATH_ROUTES } from '@/constants/path';
-import Socials from '@/components/portfolio/Socials';
+import projectImg from '@/assets/contact.avif';
+import ProjectsSection from '@/components/portfolio/projects/ProjectsSection';
+import AboutContact from './AboutContact';
 
 function Projects() {
-  const navigate = useNavigate();
   return (
-    <div className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
-      <div className='container mx-auto'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-10 xl:mb-20 text-center xl:text-start pt-8 xl:pt-12 xl:pt-0'>
-          My Projects
-        </h1>
-        <p className=''>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-          dolore maxime voluptatum accusamus repellendus optio porro a atque,
-          culpa natus totam praesentium omnis officia hic illum exercitationem,
-          voluptas, molestiae quos.
-        </p>
-        {/* <ProjectsHeaders /> */}
-        {projects.map((project) => (
+    <div>
+      <div className='relative h-screen gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden'>
+        <div className='z-0 mb-48 md:mb-0 md:absolute top-1/4 md:right-[10%] md:-translate-y-16'>
           <div
-            style={{
-              background: `radial-gradient(farthest-corner, #10131a, 20%, #0d2f3d 100%, #0d2f3d 60% `,
-            }}
-            className='flex flex-col xl:flex-row xl:gap-[30px] mx-2 my-8 xl:m-8 p-4 md:p-10 rounded-xl'
+            className='bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0'
+            style={{ transform: 'scale(1.6)' }}
           >
-            <div className='w-full xl:w-[50%] xl:h-[420px] flex flex-col xl:justify-between order-2 xl:order-none -mt-8 xl:mt-0'>
-              <div className='flex flex-col gap-[30px] h-[50%]'>
-                <div className='text-5xl pt-2 md:pt-0 md:text-6xl leading-none font-extrabold text-transparent text-outline'>
-                  {project.num}
-                </div>
-                {/* <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
-                  {project.category}
-                </h2> */}
-                <h2 className='text-[18px] md:text-[25px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize text-center sm:text-start'>
-                  {project.title}
-                </h2>
-                <p className='text-white/60'>{project.desc}</p>
-                <ul className='flex flex-wrap gap-4'>
-                  {project.stack.map((st, index) => {
-                    return (
-                      <li key={index} className='text-xl text-accent'>
-                        {st.name}
-                        {index !== project.stack.length - 1 && ','}
-                      </li>
-                    );
-                  })}
-                </ul>
-                <div className='border border-white/20'></div>
-              </div>
-            </div>
-            <div className='w-full xl:w-[50%] rounded-xl'>
+            <span
+              style={{
+                boxSizing: 'border-box',
+                display: 'block',
+                overflow: 'hidden',
+                width: 'initial',
+                height: 'initial',
+                background: 'none',
+                opacity: 1,
+                border: 0,
+                margin: 0,
+                padding: 0,
+                position: 'absolute',
+                inset: 0,
+              }}
+            >
               <img
-                src={project.image}
-                className='rounded-3xl contain h-[180px] w-[280px] md:h-[280px] md:w-[500px] xl:w-full mx-auto'
+                alt='Mahaveer Singh'
+                sizes='100vw'
+                src={projectImg}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  boxSizing: 'border-box',
+                  padding: 0,
+                  border: 'none',
+                  margin: 'auto',
+                  display: 'block',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
               />
-              <div className='relative top-6 flex justify-end items-center gap-4 xl:pt-6'>
-                <Link to={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className='w-[50px] h-[50px] xl:w-[70px] xl:h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                        <BsArrowUpRight className='text-white text-xl xl:text-3xl group-hover:text-accent' />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link to={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className=' w-[50px] h-[50px] xl:w-[70px] xl:h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                        <BsGithub className='text-white text-xl xl:text-3xl group-hover:text-accent' />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Gitub Repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
-            </div>
+            </span>
           </div>
-        ))}
-        {/* <div className='bg-red-400 h-40'>
-          <CustomPagination />
-        </div> */}
-        <button
-          type='button'
-          onClick={() => navigate(PATH_ROUTES.CONTACT)}
-          className='flex justify-center items-center border-b-2 italic text-center mb-10 mt-12 cursor-pointer mx-auto'
-        >
-          Let's work together...
-        </button>
-        <div className='flex justify-center pt-6 pb-10'>
-          <Socials
-            containerStyles='flex gap-6'
-            iconStyles='w-12 h-12 border-accent rounded-full flex justify-center items-center text-accent text-3xl hover:bg-accent hover:text-primary hover:transition-all duration-500 '
-          />
+        </div>
+        <div className='z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-gray-100 bg-opacity-50 md:bg-transparent md:pt-0'>
+          <h1 className='md:bg-white bg-transparent lg:bg-transparent bg-opacity-50 md:px-0 text-black text-5xl md:text-8xl font-bold'>
+            Projects
+          </h1>
+          <div className='flex justify-center items-center flex-col my-5'>
+            <div
+              className='bg-gray-700 w-20 h-1 rounded-full mb-2'
+              style={{ opacity: 1, transform: 'none' }}
+            ></div>
+            <div
+              className='bg-gray-700 w-20 h-1 rounded-full'
+              style={{ opacity: 1, transform: 'translateX(40px)' }}
+            ></div>
+          </div>
+          <p className='title text-xl mt-4 tracking-wider text-gray-900 leading-[1.7rem] mb-5'>
+            List of my projects that I have done and currently
+            <span className='bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent'>
+              {' '}
+              working on.
+            </span>
+          </p>
+          <div className='mb-3' style={{ opacity: 1 }}>
+            <button className='title mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border'>
+              Scroll Down
+            </button>
+          </div>
         </div>
       </div>
+
+      <div className='mt-40 flex flex-col justify-start items-center w-full pl-10 md:pl-32'>
+        <div className='flex justify-center items-center flex-col my-5 self-start'>
+          <div
+            className='bg-gray-700 w-28 h-1 rounded-full mb-3 self-start'
+            style={{ opacity: 1, transform: 'none' }}
+          ></div>
+          <div
+            className='bg-gray-700 w-28 h-1 rounded-full'
+            style={{ opacity: 1, transform: 'translateX(-50px)' }}
+          ></div>
+          <h1 className='text-3xl font-bold mt-3'>Personal Projects</h1>
+        </div>
+      </div>
+
+      <ProjectsSection />
+      <AboutContact />
     </div>
   );
 }

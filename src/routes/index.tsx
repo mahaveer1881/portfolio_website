@@ -4,6 +4,7 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Experience from '@/pages/Experience';
 import Home from '@/pages/Home';
+import ProjectDesc from '@/pages/ProjectDesc';
 import Projects from '@/pages/Projects';
 import Services from '@/pages/Services';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
@@ -24,6 +25,7 @@ const routes = [
   { path: PATH_ROUTES.PROJECTS, element: <Projects /> },
   { path: PATH_ROUTES.EXPERIENCE, element: <Experience /> },
   { path: PATH_ROUTES.ABOUT, element: <About /> },
+  { path: PATH_ROUTES.PROJECT_DESC, element: <ProjectDesc /> },
 
   {
     path: PATH_ROUTES.SITEMAP,

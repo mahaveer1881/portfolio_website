@@ -3,7 +3,6 @@ import Nav from '../portfolio/header/Nav';
 import { Link } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Moon, Sun } from 'lucide-react';
 
 function Header() {
   useGSAP(() => {
@@ -17,20 +16,20 @@ function Header() {
     gsap.from('#mob', { opacity: 0, delay: 0.5, x: 50, ease: 'elatic' });
   }, []);
   return (
-    <div className='sticky'>
-      <header className='py-4 text-white bg-black'>
-        <div className='md:mx-10 mx-4 flex justify-between items-center'>
+    <div className='fixed z-50 w-screen backdrop-blur-md'>
+      <header className='pt-8 text-black md:mx-48 flex justify-between items-center '>
+        <div className=' mx-4 flex justify-between items-center'>
           <Link to='/'>
             <h1
               id='logo'
-              className='opacity-1 translate-x md:text-xl text-base font-semibold text-[#01C3A4]'
+              className='opacity-1 translate-x md:text-xl text-base font-normal text-gray-500 tracking-[.3rem] uppercase'
             >
-              Mahaveer<span className='text-accent'>.</span>
+              Mahaveer<span className='text-gray-500'>.</span>
             </h1>
           </Link>
 
           {/* theme change button */}
-          <div className='hidden lg:block'>
+          {/* <div className='hidden lg:block'>
             {true ? (
               <button className='bg-blue-700 p-2 rounded-full'>
                 <Sun className='font-semibold w-4 h-4' />
@@ -40,11 +39,11 @@ function Header() {
                 <Moon className='font-semibold w-4 h-4' />
               </button>
             )}
-          </div>
+          </div> */}
         </div>
-        <div className='flex lg:justify-center justify-end items-center'>
+        <div className='flex lg:justify-end items-center'>
           {/* desktop nav */}
-          <div className='hidden lg:flex items-center gap-8 -mt-10'>
+          <div className='hidden lg:flex items-center gap-8'>
             <Nav />
           </div>
 
