@@ -31,18 +31,16 @@ export const homeExperience = [
   },
 ];
 
-export const homeEducation = [
-  {
-    stream: 'B. Tech. in Chemical Engineering',
-    college: 'Indian Institute of Technology, Tirupati',
-    duration: 'July 2019 - May 2023',
-    courses: [
-      'Gained hands-on experience with web development technologies like JavaScript, HTML, CSS, and React.js, as well as backend frameworks such as Django (Python), blending engineering principles with software engineering.',
-      'Completed coursework in data structures, algorithms, database management, and cloud computing, which contributed directly to my ability to work with AWS and design scalable, robust applications.',
-      'Participated in coding competitions, workshops, and hackathons, further honing my development skills and problem-solving capabilities in a technical context.',
-    ],
-  },
-];
+export const homeEducation = {
+  stream: 'B. Tech. in Chemical Engineering',
+  college: 'Indian Institute of Technology, Tirupati',
+  duration: 'July 2019 - May 2023',
+  courses: [
+    'Gained hands-on experience with web development technologies like JavaScript, HTML, CSS, and React.js, as well as backend frameworks such as Django (Python), blending engineering principles with software engineering.',
+    'Completed coursework in data structures, algorithms, database management, and cloud computing, which contributed directly to my ability to work with AWS and design scalable, robust applications.',
+    'Participated in coding competitions, workshops, and hackathons, further honing my development skills and problem-solving capabilities in a technical context.',
+  ],
+};
 
 export const homeProjects = [
   {

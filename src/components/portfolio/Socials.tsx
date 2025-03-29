@@ -1,6 +1,11 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { BiLogoGmail } from 'react-icons/bi';
 
 const socials = [
+  {
+    icon: <BiLogoGmail />,
+    path: 'mailto:Alvalen.shafel04@gmail.com?subject=Hello&amp;body=Hello Alvalens,',
+  },
   { icon: <FaGithub />, path: 'https://github.com/mahaveer1881' },
   {
     icon: <FaLinkedin />,

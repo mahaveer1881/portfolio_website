@@ -28,8 +28,10 @@ function Nav() {
             key={index}
             to={link.path}
             className={cn(
-              'capitalize font-medium hover:text-accent trans late-all',
-              link.path === pathName && 'text-accent border-b-2 border-accent'
+              'font-normal hover:text-gray-500 trans late-all tracking-[.1rem] uppercase',
+              link.path === pathName
+                ? 'text-gray-700 border-b-2 border-gray-700'
+                : 'text-gray-500'
             )}
           >
             {link.name}

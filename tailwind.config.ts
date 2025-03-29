@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: '15px',
+      padding: '5px',
     },
     screens: {
       sm: '640px',
@@ -25,14 +25,15 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: '#10131a',
+        // primary: '#10131a',
+        primary: '#e6e6e6',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         secondary: {
-          DEFAULT: '#E0E0E0',
+          DEFAULT: '#000000',
           foreground: 'hsl(var(--secondary-foreground))',
         },
         destructive: {

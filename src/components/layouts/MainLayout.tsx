@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import { ScrollArea } from '../ui/scroll-area';
 import ScrollToTop from '../portfolio/ScrollToTop';
-import Footer from './Footer';
 
 function MainLayout() {
   return (
@@ -12,7 +11,7 @@ function MainLayout() {
       <ScrollArea className=''>
         <Outlet />
       </ScrollArea>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
