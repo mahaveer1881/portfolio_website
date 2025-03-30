@@ -1,6 +1,7 @@
 import { homeEducation } from '@/constants/experience';
-
-import about_img from '@/assets/about_img.avif';
+import college1 from '@/assets/personal/college_1.jpg';
+import college3 from '@/assets/personal/college_2.jpg';
+import college2 from '@/assets/personal/college_4.jpeg';
 
 function EducationSection() {
   return (
@@ -13,7 +14,7 @@ function EducationSection() {
           <section className='grid gap-8 md:gap-12'>
             <div className='text-center space-y-2'>
               <h2 className='text-3xl font-bold mt-3 text-black'>Education</h2>
-              <p className='text-muted-foreground max-w-[800px] mx-auto'>
+              <p className='text-gray600 font-normal max-w-[800px] mx-auto tracking-wider'>
                 Get to know more about my educational background.
               </p>
             </div>
@@ -35,7 +36,7 @@ function EducationSection() {
                   decoding='async'
                   data-nimg='fill'
                   sizes='100vw'
-                  src={about_img}
+                  src={college1}
                   style={{
                     position: 'absolute',
                     height: '100%',
@@ -58,7 +59,7 @@ function EducationSection() {
                   decoding='async'
                   data-nimg='fill'
                   sizes='100vw'
-                  src={about_img}
+                  src={college2}
                   style={{
                     position: 'absolute',
                     height: '100%',
@@ -81,7 +82,7 @@ function EducationSection() {
                   decoding='async'
                   data-nimg='fill'
                   sizes='100vw'
-                  src={about_img}
+                  src={college3}
                   style={{
                     position: 'absolute',
                     height: '100%',
@@ -102,14 +103,17 @@ function EducationSection() {
           <h2 className='text-2xl font-bold tracking-wider mb-3'>
             {homeEducation.stream}
           </h2>
-          <div className=''>
-            <p className='paraheading'>{homeEducation.college}</p>
-            <p className='paraheading'>{homeEducation.duration}</p>
+          <div className='tracking-wider'>
+            <p className='text-gray600 font-normal'>{homeEducation.college}</p>
+            <p className='text-gray600 font-normal'>{homeEducation.duration}</p>
             <div className='my-3'>
-              <p className='paraheading my-4'>Key Highlights:</p>
+              <p className='text-gray600 font-normal my-4'>Key Highlights:</p>
               <ul className='md:ml-8 ml-3 list-disc'>
                 {homeEducation.courses.map((course, courseIndex) => (
-                  <li className='mypara leading-relaxed py-1' key={courseIndex}>
+                  <li
+                    className='text-gray500 font-normal leading-relaxed py-1'
+                    key={courseIndex}
+                  >
                     {course}
                   </li>
                 ))}

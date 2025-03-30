@@ -98,7 +98,7 @@ function SkillsSection() {
         </div>
       </div>
 
-      <div className='mx-auto gap-4 p-10 grid grid-cols-1 md:grid-cols-2 mt-20 mb-24'>
+      <div className='mx-auto gap-4 p-10 grid grid-cols-1 md:grid-cols-1 mt-20 mb-24 px-40'>
         {/* Language & Framework Section */}
         <div
           className='flex justify-center items-center flex-col mb-5'
@@ -107,7 +107,7 @@ function SkillsSection() {
           <h2 className='text-2xl md:text-xl font-normal mb-3 md:tracking-[.3rem] lg:tracking-[.5rem] uppercase'>
             Language &amp; Framework
           </h2>
-          <p className='text-gray-500 text-center tracking-widest md:px-5'>
+          <p className='text-gray-500 text-center tracking-widest md:px-10'>
             <span className='text-black font-bold'>HTML</span> |{' '}
             <span className='text-black font-bold'>CSS</span> |{' '}
             <span className='text-black font-bold'>Javascript</span> |{' '}
@@ -122,14 +122,13 @@ function SkillsSection() {
             <span className='text-black font-bold'>PostgreSQL</span> |{' '}
             <span className='text-black font-medium'>MongoDB</span> |{' '}
             <span className='text-black font-medium'>Firebase</span> |{' '}
-            <span className='text-black font-medium'>PHP</span> |{' '}
-            <span className='text-black font-bold'>Laravel</span> |{' '}
-            <span className='text-black font-medium'>Python</span>
+            <span className='text-black font-medium'>Python</span> |{' '}
+            <span className='text-black font-medium'>AWS Cloud</span>
           </p>
         </div>
 
         {/* Tools Section */}
-        <div
+        {/* <div
           className='flex justify-start items-center flex-col mb-5'
           style={{ opacity: 1, transform: 'none' }}
         >
@@ -138,15 +137,11 @@ function SkillsSection() {
           </h2>
           <p className='text-gray-500 text-center tracking-wider md:px-'>
             <span className='text-black font-bold'>Visual Studio Code</span> |{' '}
-            <span className='text-black font-medium'>Jet Brains</span> |{' '}
             <span className='text-black font-bold'>Git</span> |{' '}
             <span className='text-black font-bold'>Github</span> |{' '}
-            <span className='text-black font-medium'>Figma</span> |{' '}
-            <span className='text-black font-medium'>Adobe Photoshop</span> |{' '}
-            <span className='text-black font-medium'>Adobe Premiere Pro</span> |{' '}
-            <span className='text-black font-medium'>Adobe After Effect</span>
+            <span className='text-black font-medium'>Figma</span>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

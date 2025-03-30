@@ -1,8 +1,14 @@
-import projectImg from '@/assets/contact.avif';
 import ProjectsSection from '@/components/portfolio/projects/ProjectsSection';
-import AboutContact from './AboutContact';
+import AboutContact from '../components/portfolio/AboutContact';
+import projectSectiomImg from '@/assets/project_section.jpg';
 
 function Projects() {
+  const scrollDown = () => {
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div>
       <div className='relative h-screen gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden'>
@@ -30,7 +36,7 @@ function Projects() {
               <img
                 alt='Mahaveer Singh'
                 sizes='100vw'
-                src={projectImg}
+                src={projectSectiomImg}
                 style={{
                   position: 'absolute',
                   inset: 0,
@@ -69,7 +75,10 @@ function Projects() {
             </span>
           </p>
           <div className='mb-3' style={{ opacity: 1 }}>
-            <button className='title mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border'>
+            <button
+              onClick={scrollDown}
+              className='title mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border'
+            >
               Scroll Down
             </button>
           </div>

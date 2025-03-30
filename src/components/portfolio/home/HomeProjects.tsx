@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import contact from '@/assets/contact.avif';
+import projectSectiomImg from '@/assets/project_section.jpg';
 
 function HomeProjects() {
   // const [isHover, setIsHover] = useState<number | null>(null);
@@ -34,7 +34,7 @@ function HomeProjects() {
                   }}
                 >
                   <img
-                    src={contact}
+                    src={projectSectiomImg}
                     alt='Profile'
                     style={{
                       position: 'absolute',
@@ -74,7 +74,7 @@ function HomeProjects() {
             </div>
 
             {/* Description Text */}
-            <p className='title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5'>
+            <p className='title text-xl mt-4 tracking-wider text-gray-600 leading-[1.7rem] mb-5'>
               This is some of my projects that I have done{' '}
               <span className='bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent'>
                 {' '}

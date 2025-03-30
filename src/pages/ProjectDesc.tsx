@@ -1,5 +1,5 @@
 import project from '@/assets/project_1.png';
-import AboutContact from './AboutContact';
+import AboutContact from '../components/portfolio/AboutContact';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ function ProjectDesc() {
         <div className='mt-40 mx-auto w-[80%]'>
           <button
             onClick={() => navigate('/projects')}
-            className='flex justify-start items-center gap-2 text-2xl text-gray-500'
+            className='flex justify-start items-center gap-2 text-xl text-gray-500'
           >
             <span>
               <IoIosArrowBack />
@@ -50,7 +50,7 @@ function ProjectDesc() {
                   Project
                 </h2>
                 <h1 className='text-4xl font-medium text-neutral-900'>
-                  Client Personal Portfolio Website
+                  Spotify Clone
                 </h1>
               </div>
               <div>

@@ -35,13 +35,11 @@ function ProjectsFilter({
               )}
               onClick={() => setFilter(item.value)}
             >
-              <p className='h-8 w-fit'>{item.label}</p>
+              <p className='h-8 w-fit tracking-wide'>{item.label}</p>
             </button>
           ))}
         </div>
         <div className='flex justify-end items-center gap-8'>
-          {/* <div>Skills Dropdown</div>
-          <div>Time Dropdown</div> */}
           <div className='flex justify-center items-center'>
             {view === 'list' ? (
               <button onClick={() => setView('grid')}>

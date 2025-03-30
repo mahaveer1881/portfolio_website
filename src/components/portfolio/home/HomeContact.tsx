@@ -1,11 +1,11 @@
 import Socials from '@/components/portfolio/Socials';
 
-// import contact from '@/assets/contact.avif';
 const HomeContact = () => {
   return (
     <div
       className='section fp-section fp-table fp-is-overflow active fp-completely'
       data-anchor='contact'
+      id='contactSection'
     >
       <div className='fp-overflow'>
         <div className='relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center overflow-hidden'>
@@ -65,13 +65,13 @@ const HomeContact = () => {
                 style={{ transform: 'translateX(40px)' }}
               />
             </div>
-            <p className='title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] md:mb-5'>
+            <p className='title text-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] md:mb-5'>
               Feel free to contact me if you have any{' '}
               <span className='bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent'>
                 questions or just want to say hi.
               </span>
             </p>
-            <p className='title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5'>
+            <p className='title text-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] mb-5'>
               <a href='mailto:mahaveersinghgurjar18@gmail.com?subject=Hello&body=Hello Mahaveer,'>
                 mahaveersinghgurjar18@gmail.com
               </a>

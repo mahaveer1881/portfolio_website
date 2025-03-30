@@ -39,12 +39,9 @@ export default function Home() {
 
   return (
     <section className='h-full overflow-hidden'>
-      <div>
+      <div className=''>
         <Profile />
         <AboutMe />
-        {/* <HomeExperience />
-        <HomeEducation />
-        <HomeSkills /> */}
         <HomeProjects />
         <HomeContact />
       </div>

@@ -73,6 +73,15 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
 
+  @layer utilities {
+    .scroll-container {
+      scroll-snap-type: y mandatory;
+    }
+    .section {
+      scroll-snap-align: start;
+    }
+  }
+
   .mypara {
     @apply text-black text-opacity-60 text-sm sm:text-base;
   }
