@@ -43,20 +43,20 @@ function Profile() {
   };
   return (
     <div>
-      <div className='h-[95vh] w-screen flex flex-col items-center justify-center overflow-hidden'>
-        <div className='mx-auto grid grid-cols-1 md:grid-cols-5 gap-40 overflow-hidden w-[75%]'>
+      <div className='h-auto md:h-[100vh]  w-screen flex flex-col items-center justify-center overflow-hidde'>
+        <div className='mx-auto grid grid-cols-1 md:grid-cols-5 gap-40 overflow-hidde md:w-[75%] w-full'>
           <div className='col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-start md:right-[10%]'>
-            <div className='block md:hidden col-span-1 mx-auto my-10'>
+            <div className='block md:hidden col-span-1 mt-32 mb-10'>
               <div className='bg-slate-500 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300'>
                 <span className='relative max-w-full h-full overflow-hidden'>
                   {/* <span className='block w-full h-full'>
-                  <img
-                    alt=''
-                    aria-hidden='true'
-                    src='data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27500%27%20height=%27500%27/%3e'
-                    className='block max-w-full w-full h-full object-cover'
-                  />
-                </span> */}
+                    <img
+                      alt=''
+                      aria-hidden='true'
+                      src={mainProfile}
+                      className='block max-w-full w-full h-full object-cover'
+                    />
+                  </span> */}
                   <img
                     alt='Mahaveer'
                     className='rounded-full w-full h-full object-cover'
@@ -85,7 +85,7 @@ function Profile() {
             </p>
             <p
               style={{ opacity: 1, transform: 'none' }}
-              className='title text-xl  2xl:text-xl mt-4 tracking-wider text-gray600 leading-[1.7rem]'
+              className='title text-xl  2xl:text-xl mt-8 md:mt-4 px-6 md:px-0 tracking-wider text-gray600 leading-[1.7rem]'
             >
               I’m a Full Stack Developer, graduated from IIT Tirupati. I started
               with Frontend Development and now build end-to-end solutions.
@@ -93,11 +93,11 @@ function Profile() {
             </p>
             <div
               style={{ opacity: 1, transform: 'none' }}
-              className='buttons flex flex-row justify-center items-center space-x-4 mt-10'
+              className='buttons flex flex-col md:flex-row justify-center md:justify-start items-center gap-4 mt-20 md:mt-10 w-full'
             >
               <button
                 onClick={handleResume}
-                className='title mr-3  rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border flex justify-center items-center gap-3'
+                className='title mr-3 w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border flex justify-center items-center gap-3'
               >
                 {isLoading ? (
                   <span>
@@ -112,7 +112,7 @@ function Profile() {
               </button>
               <button
                 onClick={scrollToContact}
-                className='title mr-3  rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out transparent border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 box-border'
+                className='title w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out transparent border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 box-border'
               >
                 Contact Me
               </button>

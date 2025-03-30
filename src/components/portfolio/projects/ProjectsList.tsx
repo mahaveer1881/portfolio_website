@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { ProjectsData } from './ProjectGrid';
 import { PATH_ROUTES } from '@/constants/path';
 import {
   Table,
@@ -9,8 +8,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { ProjectDataType } from '@/constants/projects';
 
-function ProjectsList({ projects }: { projects: ProjectsData[] }) {
+function ProjectsList({ projects }: { projects: ProjectDataType[] }) {
   const navigate = useNavigate();
   return (
     <div className='flex flex-col justify-center items-center gap-10 w-[95%] mx-10'>
@@ -33,7 +33,13 @@ function ProjectsList({ projects }: { projects: ProjectsData[] }) {
             >
               <TableCell className='font-medium'>{project.year}</TableCell>
               <TableCell>{project.title}</TableCell>
-              <TableCell>HTML,CSS</TableCell>
+              <TableCell>
+                <div className='flex flex-wrap justify-start items-center gap-2 w-[80%] '>
+                  {project?.stack.map((item) => (
+                    <p className='text-sm font-thin'>{item},</p>
+                  ))}
+                </div>
+              </TableCell>
               <TableCell className='text-right pr-10'>Links</TableCell>
             </TableRow>
           ))}

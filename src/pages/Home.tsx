@@ -1,9 +1,11 @@
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import Profile from '@/components/portfolio/home/Profile';
-import HomeProjects from '@/components/portfolio/home/HomeProjects';
-import AboutMe from '@/components/portfolio/home/AboutMe';
 import HomeContact from '@/components/portfolio/home/HomeContact';
+import HomePageSection from '@/components/portfolio/HomePageSection';
+import aboutImg from '@/assets/about_img.avif';
+import projectSectiomImg from '@/assets/project_section.jpg';
+import { PATH_ROUTES } from '@/constants/path';
 
 export default function Home() {
   useGSAP(() => {
@@ -41,8 +43,18 @@ export default function Home() {
     <section className='h-full overflow-hidden'>
       <div className=''>
         <Profile />
-        <AboutMe />
-        <HomeProjects />
+        <HomePageSection
+          img={aboutImg}
+          title='About Me'
+          desc='A brief introduction about me and my interest.'
+          href={PATH_ROUTES.ABOUT}
+        />
+        <HomePageSection
+          img={projectSectiomImg}
+          title='My Projects'
+          desc='This is some of my projects that I have done and currently working on.'
+          href={PATH_ROUTES.PROJECTS}
+        />
         <HomeContact />
       </div>
     </section>

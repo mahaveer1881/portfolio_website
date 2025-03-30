@@ -1,6 +1,7 @@
 import { PATH_ROUTES } from '@/constants/path';
 import { useNavigate } from 'react-router-dom';
 import project1 from '@/assets/project_1.png';
+import { ProjectDataType } from '@/constants/projects';
 
 export interface ProjectsData {
   title: string;
@@ -9,13 +10,15 @@ export interface ProjectsData {
   year: string;
 }
 
-function ProjectGrid({ projects }: { projects: ProjectsData[] }) {
+function ProjectGrid({ projects }: { projects: ProjectDataType[] }) {
   const navigate = useNavigate();
   return (
     <div className='grid grid-cols-2 items-center gap-10 mx-10'>
       {projects.map((project, index) => (
         <div
-          onClick={() => navigate(`${PATH_ROUTES.PROJECT_DESC}?${project.id}`)}
+          onClick={() =>
+            navigate(`${PATH_ROUTES.PROJECT_DESC}?id=${project.id}`)
+          }
           key={index}
           className='relative border rounded-xl border-black/50 h-[400px] shadow-lg bg-cover bg-center bg-opacity-5 cursor-pointer'
           style={{ backgroundImage: `url(${project1})` }}
