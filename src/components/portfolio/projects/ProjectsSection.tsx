@@ -8,8 +8,16 @@ const projects = [
     id: 'spotify-clone',
     title: 'Spotify Clone',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi repellat recusandae nobis possimus quibusdam rerum nisi consectetur dolore at?',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React.js'],
-    domain: 'frontend',
+    skills: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Node.js',
+      'Express',
+      'MongoDB',
+    ],
+    domain: 'full_stack',
     year: '2025',
   },
   {
@@ -42,7 +50,7 @@ function ProjectsSection() {
   const [view, setView] = useState<string>('grid');
 
   return (
-    <div className='mx-auto w-[80%] mb-48'>
+    <div id='projects' className='mx-auto w-[80%] mb-48'>
       <div>
         <ProjectsFilter
           filter={filter}

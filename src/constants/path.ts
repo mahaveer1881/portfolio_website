@@ -5,7 +5,7 @@ export const PATH_ROUTES = {
   EXPERIENCE: '/experience',
   CONTACT: '/contact',
   ABOUT: '/about',
-  PROJECT_DESC: '/projets/details',
+  PROJECT_DESC: '/projects/details',
 
   SITEMAP: 'sitemap.xml',
 };

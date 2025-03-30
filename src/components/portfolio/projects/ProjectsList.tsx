@@ -16,7 +16,7 @@ function ProjectsList({ projects }: { projects: ProjectsData[] }) {
     <div className='flex flex-col justify-center items-center gap-10 w-[95%] mx-10'>
       <Table className='rounded-lg h-auto p-10'>
         <TableHeader>
-          <TableRow className='bg-gray-300 hover:bg-black/10 rounded-lg'>
+          <TableRow className='bg-gray-300 hover:bg-gray-300 rounded-lg'>
             <TableHead className='w-[150px] text-black '>Year</TableHead>
             <TableHead className='text-black'>Title</TableHead>
             <TableHead className='text-black'>Technology</TableHead>

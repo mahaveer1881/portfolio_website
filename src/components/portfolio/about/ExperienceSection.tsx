@@ -22,7 +22,7 @@ function ExperienceSection() {
           </h1>
         </div>
       </div>
-      <div className='mt-8 md:ml-8 ml-0 w-[80%]'>
+      <div className='mt-8 md:ml-8 ml-0 w-[80%] tracking-wider'>
         {homeExperience.map((item, index) => (
           <div key={index} className='flex items-start relative gap-6 '>
             <div className='flex flex-col items-center '>
@@ -35,13 +35,18 @@ function ExperienceSection() {
               <h1 className='sm:text-xl text-base text-secondary font-semibold'>
                 {item.position}
               </h1>
-              <p className='paraheading'>{item.company}</p>
-              <p className='paraheading'>{item.duration}</p>
+              <p className='text-gray600 font-semibold'>{item.company}</p>
+              <p className='text-gray600 font-semibold'>{item.duration}</p>
               <div className='my-3'>
-                <p className='paraheading my-4'>Responsibilites Include:</p>
+                <p className='text-gray600 font-normal my-4'>
+                  Responsibilites Include:
+                </p>
                 <ul className='md:ml-8 ml-3 list-disc'>
                   {item.res.map((tasks, taskIndex) => (
-                    <li className='mypara leading-relaxed py-1' key={taskIndex}>
+                    <li
+                      className='text-gray500 leading-relaxed py-1 font-normal'
+                      key={taskIndex}
+                    >
                       {tasks}
                     </li>
                   ))}

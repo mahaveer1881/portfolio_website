@@ -4,9 +4,15 @@ import about_img from '@/assets/about_img.avif';
 import WhoAmI from '@/components/portfolio/about/WhoAmI';
 import ExperienceSection from '@/components/portfolio/about/ExperienceSection';
 import Tagline from './Tagline';
-import AboutContact from './AboutContact';
+import AboutContact from '../components/portfolio/AboutContact';
 
 function About() {
+  const scrollDown = () => {
+    const element = document.getElementById('whoami');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div>
       <div className='relative h-screen gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden'>
@@ -73,7 +79,10 @@ function About() {
             </span>
           </p>
           <div className='mb-3' style={{ opacity: 1 }}>
-            <button className='title mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border'>
+            <button
+              onClick={scrollDown}
+              className='title mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border'
+            >
               Scroll Down
             </button>
           </div>

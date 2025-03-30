@@ -27,6 +27,10 @@ const config: Config = {
       colors: {
         // primary: '#10131a',
         primary: '#e6e6e6',
+
+        gray500: '#6B7280',
+        gray600: '#4B5563',
+
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
