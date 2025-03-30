@@ -21,7 +21,7 @@ function ProjectsFilter({
   setView: (v: string) => void;
 }) {
   return (
-    <div className='w-full mb-20'>
+    <div className='w-full my-10'>
       <div className='flex justify-between items-center'>
         <div className='flex justify-start items-center gap-8'>
           {Filters.map((item, index) => (

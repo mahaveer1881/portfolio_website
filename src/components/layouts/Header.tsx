@@ -17,14 +17,14 @@ function Header() {
   }, []);
   return (
     <div className='fixed z-50 w-screen backdrop-blur-md'>
-      <header className='pt-8 text-black md:mx-48 flex justify-between items-center '>
+      <header className='pt-8 text-black lg:mx-32 flex justify-between items-center '>
         <div className=' mx-4 flex justify-between items-center'>
           <Link to='/'>
             <h1
               id='logo'
-              className='opacity-1 translate-x md:text-xl text-base font-normal text-gray-500 tracking-[.3rem] uppercase'
+              className='opacity-1 translate-x md:text-xl text-base font-normal text-black tracking-[.3rem] uppercase'
             >
-              Mahaveer<span className='text-gray-500'>.</span>
+              Mahaveer<span className='text-black'>.</span>
             </h1>
           </Link>
 
@@ -48,7 +48,7 @@ function Header() {
           </div>
 
           {/* movile nav */}
-          <div id='mob' className='lg:hidden -mt-6 mr-4'>
+          <div id='mob' className='lg:hidden mr-4'>
             <MobileNav />
           </div>
         </div>

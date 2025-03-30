@@ -1,6 +1,7 @@
 import photo1 from '@/assets/personal/photo_1.jpg';
 import photo2 from '@/assets/personal/photo_3.jpg';
 import photo3 from '@/assets/personal/photo_4.jpg';
+import ThreeImagesDisplay from '../ThreeImagesDisplay';
 
 function WhoAmI() {
   return (
@@ -8,79 +9,7 @@ function WhoAmI() {
       id='whoami'
       className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 px-20'
     >
-      <div className='flex justify-center items-start flex-col mb-5'>
-        <div className='images relative w-full aspect-square'>
-          <div className='absolute top-28 left-10 w-[50%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-            <div
-              className='w-full h-full'
-              style={{ opacity: 1, transform: 'none' }}
-            >
-              <img
-                alt='Mahaveer'
-                loading='lazy'
-                decoding='async'
-                data-nimg='fill'
-                sizes='100vw'
-                src={photo1}
-                style={{
-                  position: 'absolute',
-                  height: '100%',
-                  width: '100%',
-                  inset: '0px',
-                  objectFit: 'cover',
-                  color: 'transparent',
-                }}
-              />
-            </div>
-          </div>
-          <div className='absolute top-16 right-28 w-[30%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-            <div
-              className='w-full h-full'
-              style={{ opacity: 1, transform: 'none' }}
-            >
-              <img
-                alt='Alvalens'
-                loading='lazy'
-                decoding='async'
-                data-nimg='fill'
-                sizes='100vw'
-                src={photo2}
-                style={{
-                  position: 'absolute',
-                  height: '100%',
-                  width: '100%',
-                  inset: '0px',
-                  objectFit: 'cover',
-                  color: 'transparent',
-                }}
-              />
-            </div>
-          </div>
-          <div className='absolute bottom-16 right-20 w-[40%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-            <div
-              className='w-full h-full'
-              style={{ opacity: 1, transform: 'none' }}
-            >
-              <img
-                alt='Alvalens'
-                loading='lazy'
-                decoding='async'
-                data-nimg='fill'
-                sizes='100vw'
-                src={photo3}
-                style={{
-                  position: 'absolute',
-                  height: '100%',
-                  width: '100%',
-                  inset: '0px',
-                  objectFit: 'cover',
-                  color: 'transparent',
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ThreeImagesDisplay photo1={photo1} photo2={photo2} photo3={photo3} />
       <div
         className='flex justify-center items-start flex-col mb-5 md:px-10'
         style={{ opacity: 1, transform: 'none' }}

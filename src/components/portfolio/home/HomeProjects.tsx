@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import projectSectiomImg from '@/assets/project_section.jpg';
 
 function HomeProjects() {
-  // const [isHover, setIsHover] = useState<number | null>(null);
-
   return (
     <div
       className='section fp-section fp-table fp-is-overflow active fp-completely'

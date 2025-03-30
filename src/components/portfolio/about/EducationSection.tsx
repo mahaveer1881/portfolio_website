@@ -2,10 +2,11 @@ import { homeEducation } from '@/constants/experience';
 import college1 from '@/assets/personal/college_1.jpg';
 import college3 from '@/assets/personal/college_2.jpg';
 import college2 from '@/assets/personal/college_4.jpeg';
+import ThreeImagesDisplay from '../ThreeImagesDisplay';
 
 function EducationSection() {
   return (
-    <div className='w-full px-20 mx-auto flex justify-center items-center flex-col'>
+    <div className='w-full mx-auto flex justify-center items-center flex-col mt-20'>
       <div className='mx-auto gap-4 p-10 grid grid-cols-1 mt-20'>
         <div
           className='flex justify-center items-center flex-col mb-5'
@@ -23,79 +24,11 @@ function EducationSection() {
       </div>
 
       <div className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 px-20'>
-        <div className='flex justify-center items-start flex-col mb-5'>
-          <div className='images relative w-full aspect-square'>
-            <div className='absolute top-28 left-10 w-[50%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-              <div
-                className='w-full h-full'
-                style={{ opacity: 1, transform: 'none' }}
-              >
-                <img
-                  alt='Alvalens'
-                  loading='lazy'
-                  decoding='async'
-                  data-nimg='fill'
-                  sizes='100vw'
-                  src={college1}
-                  style={{
-                    position: 'absolute',
-                    height: '100%',
-                    width: '100%',
-                    inset: '0px',
-                    objectFit: 'cover',
-                    color: 'transparent',
-                  }}
-                />
-              </div>
-            </div>
-            <div className='absolute top-16 right-28 w-[30%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-              <div
-                className='w-full h-full'
-                style={{ opacity: 1, transform: 'none' }}
-              >
-                <img
-                  alt='Alvalens'
-                  loading='lazy'
-                  decoding='async'
-                  data-nimg='fill'
-                  sizes='100vw'
-                  src={college2}
-                  style={{
-                    position: 'absolute',
-                    height: '100%',
-                    width: '100%',
-                    inset: '0px',
-                    objectFit: 'cover',
-                    color: 'transparent',
-                  }}
-                />
-              </div>
-            </div>
-            <div className='absolute bottom-16 right-20 w-[40%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300'>
-              <div
-                className='w-full h-full'
-                style={{ opacity: 1, transform: 'none' }}
-              >
-                <img
-                  alt='Alvalens'
-                  loading='lazy'
-                  decoding='async'
-                  data-nimg='fill'
-                  sizes='100vw'
-                  src={college3}
-                  style={{
-                    position: 'absolute',
-                    height: '100%',
-                    width: '100%',
-                    inset: '0px',
-                    objectFit: 'cover',
-                    color: 'transparent',
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <ThreeImagesDisplay
+          photo1={college1}
+          photo2={college2}
+          photo3={college3}
+        />
         <div
           className='flex justify-center items-start flex-col mb-5 md:px-10'
           style={{ opacity: 1, transform: 'none' }}

@@ -17,15 +17,18 @@ function MobileNav() {
       <SheetTrigger className='flex justify-center items-center'>
         <CiMenuFries
           onClick={() => setIsOpen(true)}
-          className='text-[25px] text-accent'
+          className='text-[25px] text-secondary font-bold'
         />
       </SheetTrigger>
       <SheetContent className='flex flex-col'>
-        <X className='text-3xl text-accent' onClick={() => setIsOpen(false)} />
+        <X
+          className='text-3xl text-seconary'
+          onClick={() => setIsOpen(false)}
+        />
         <div className='mt-12 mb-10 text-center text-2xl'>
           <Link to={PATH_ROUTES.HOME}>
             <h1 className='text-2xl font-semibold'>
-              Mahaveer <span className='text-accent'>.</span>
+              Mahaveer <span className='text-secondary'>.</span>
             </h1>
           </Link>
         </div>
@@ -37,9 +40,9 @@ function MobileNav() {
                 to={link.path}
                 key={index}
                 className={cn(
-                  'text-xl capitalize hover:text-accent transition-all duration-300',
+                  'text-xl capitalize hover:text-secondary transition-all duration-300',
                   link.path === pathName &&
-                    'text-accent border-b-2 border-accent'
+                    'text-secondary border-b-2 border-secondary'
                 )}
                 onClick={() => setIsOpen(false)}
               >

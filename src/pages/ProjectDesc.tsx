@@ -1,10 +1,16 @@
 import project from '@/assets/project_1.png';
 import AboutContact from '../components/portfolio/AboutContact';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { personalProjects } from '@/constants/projects';
 
 function ProjectDesc() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const projectId = searchParams.get('id');
+
+  const Project = personalProjects.find((item) => item.id === projectId);
+
   return (
     <div>
       <div>
@@ -43,23 +49,27 @@ function ProjectDesc() {
           </button>
         </div>
         <div className='min-h-screen flex justify-center items-center -mt-40'>
-          <div className='mx-auto grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-0 px-20'>
+          <div className='mx-auto grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-0 px-48'>
             <div className='min-h-screen sm:min-h-0 flex justify-center items-start flex-col mb-5 space-y-10 mx-auto'>
               <div>
                 <h2 className='uppercase font-normal text-lg tracking-[8px] text-neutral-400'>
                   Project
                 </h2>
                 <h1 className='text-4xl font-medium text-neutral-900'>
-                  Spotify Clone
+                  {Project?.title}
                 </h1>
               </div>
               <div>
                 <h2 className='uppercase font-normal text-lg tracking-[8px] text-neutral-400'>
                   Technology
                 </h2>
-                <p className='text-2xl font-normal text-neutral-900'>
-                  HTML, CSS, JS, ReactJS, TailwindCSS, Typescript
-                </p>
+                <div className='flex flex-wrap justify-start items-center gap-2 w-[70%] '>
+                  {Project?.stack.map((item) => (
+                    <p className='text-2xl font-normal text-neutral-900'>
+                      {item},
+                    </p>
+                  ))}
+                </div>
               </div>
               <div>
                 <h2 className='uppercase font-normal text-lg tracking-[8px] text-neutral-400'>
