@@ -7,11 +7,11 @@ function WhoAmI() {
   return (
     <div
       id='whoami'
-      className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 px-20'
+      className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 md:px-20 px-0'
     >
       <ThreeImagesDisplay photo1={photo1} photo2={photo2} photo3={photo3} />
       <div
-        className='flex justify-center items-start flex-col mb-5 md:px-10'
+        className='flex justify-center items-start flex-col mb-5 md:px-10 px-8'
         style={{ opacity: 1, transform: 'none' }}
       >
         <h2 className='text-2xl font-bold tracking-wider mb-3'>

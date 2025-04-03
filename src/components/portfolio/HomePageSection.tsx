@@ -12,10 +12,10 @@ function HomePageSection({
   href: string;
 }) {
   return (
-    <div className=''>
-      <div className=' relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden'>
-        <div className='z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 '>
-          <div className='rounded-full h-[600px] w-[550px] lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300'>
+    <div className='h-auto mb-20 '>
+      <div className=' relative h-auto md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden'>
+        <div className='z-0 md:mb-0 md:absolute top-1/4  md:right-[10%] md:-translate-y-16 '>
+          <div className='rounded-full h-[600px] w-[550px] lg:px-12 grayscale-0 md:grayscale hover:grayscale-0 transition-all ease duration-300'>
             <span
               style={{
                 boxSizing: 'border-box',
@@ -51,7 +51,7 @@ function HomePageSection({
                     display: 'block',
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover', // Ensures the image covers the circle while maintaining aspect ratio
+                    objectFit: 'cover',
                     borderRadius: '20px',
                   }}
                 />
@@ -59,10 +59,10 @@ function HomePageSection({
             </span>
           </div>
         </div>
-        <div className='z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5'>
+        <div className='z-10 w-full md:absolute md:w-auto md:left-[10%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5'>
           <h1
             style={{ opacity: 1, transform: 'none' }}
-            className='bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold'
+            className='lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-4xl md:text-8xl font-bold'
           >
             {title}
           </h1>

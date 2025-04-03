@@ -43,11 +43,11 @@ function Profile() {
   };
   return (
     <div>
-      <div className='h-auto md:h-[100vh]  w-screen flex flex-col items-center justify-center overflow-hidde'>
+      <div className='h-auto mb-20 md:mb-0 md:h-[100vh]  w-screen flex flex-col items-center justify-center overflow-hidde'>
         <div className='mx-auto grid grid-cols-1 md:grid-cols-5 gap-40 overflow-hidde md:w-[75%] w-full'>
           <div className='col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-start md:right-[10%]'>
-            <div className='block md:hidden col-span-1 mt-32 mb-10'>
-              <div className='bg-slate-500 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300'>
+            <div className='block md:hidden col-span-1 mt-32 mb-32'>
+              <div className='bg-slate-500 rounded-full h-60 w-60 grayscale-0 hover:grayscale-0 transition-all ease duration-300'>
                 <span className='relative max-w-full h-full overflow-hidden'>
                   {/* <span className='block w-full h-full'>
                     <img
@@ -59,7 +59,7 @@ function Profile() {
                   </span> */}
                   <img
                     alt='Mahaveer'
-                    className='rounded-full w-full h-full object-cover'
+                    className='rounded-full w-full h-[120%] object-cover'
                     src={mainProfile}
                   />
                 </span>

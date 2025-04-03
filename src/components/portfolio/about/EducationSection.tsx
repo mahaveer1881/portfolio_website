@@ -23,14 +23,14 @@ function EducationSection() {
         </div>
       </div>
 
-      <div className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 px-20'>
+      <div className='relative mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 mb-10 md:px-20 px-0'>
         <ThreeImagesDisplay
           photo1={college1}
           photo2={college2}
           photo3={college3}
         />
         <div
-          className='flex justify-center items-start flex-col mb-5 md:px-10'
+          className='flex justify-center items-start flex-col mb-5 md:px-10 px-4'
           style={{ opacity: 1, transform: 'none' }}
         >
           <h2 className='text-2xl font-bold tracking-wider mb-3'>
