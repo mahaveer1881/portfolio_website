@@ -10,7 +10,7 @@ function ThreeImagesDisplay({
   return (
     <div className='flex justify-center items-start flex-col mb-5'>
       <div className='images relative w-full aspect-square'>
-        <div className='md:absolute top-28 left-10 md:w-[50%] w-[90%] aspect-square grayscale-0 md:grayscale hover:grayscale-0 transition-all ease duration-300'>
+        <div className='md:absolute top-28 left-10 md:w-[50%] w-[100%] aspect-square grayscale-0 md:grayscale hover:grayscale-0 transition-all ease duration-300'>
           <div
             className='w-full h-full'
             style={{ opacity: 1, transform: 'none' }}
@@ -33,7 +33,7 @@ function ThreeImagesDisplay({
             />
           </div>
         </div>
-        <div className='md:absolute top-16 right-28 md:w-[30%] w-[90%]  aspect-square grayscale-0 md:grayscale  hover:grayscale-0 transition-all ease duration-300'>
+        <div className='md:absolute top-16 right-28 md:w-[30%] w-[100%]  aspect-square grayscale-0 md:grayscale  hover:grayscale-0 transition-all ease duration-300'>
           <div
             className='w-full h-full'
             style={{ opacity: 1, transform: 'none' }}
@@ -56,7 +56,7 @@ function ThreeImagesDisplay({
             />
           </div>
         </div>
-        <div className='md:absolute bottom-16 right-20 md:w-[40%] w-[90%] aspect-square grayscale-0 md:grayscale  hover:grayscale-0 transition-all ease duration-300'>
+        <div className='md:absolute bottom-16 right-20 md:w-[40%] w-[100%] aspect-square grayscale-0 md:grayscale  hover:grayscale-0 transition-all ease duration-300'>
           <div
             className='w-full h-full'
             style={{ opacity: 1, transform: 'none' }}

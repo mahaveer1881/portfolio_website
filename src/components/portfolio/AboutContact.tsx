@@ -7,7 +7,7 @@ function AboutContact() {
         <div className='flex justify-center items-center flex-col self-center min-h-[50vh] mt-[20vh] border-b-2 min-w-[80vw]'>
           <a href='/#contact'>
             <h1
-              className='text-5xl md:text-7xl font-medium mt-3 hover:underline whitespace-nowrap leading-none flex justify-center items-center gap-6'
+              className='text-4xl md:text-7xl font-medium mt-3 hover:underline whitespace-nowrap leading-none flex justify-center items-center gap-6'
               style={{ opacity: 1, transform: 'none' }}
             >
               Get In Touch

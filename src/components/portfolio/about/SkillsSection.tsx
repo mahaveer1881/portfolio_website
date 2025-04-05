@@ -98,7 +98,7 @@ function SkillsSection() {
         </div>
       </div>
 
-      <div className='mx-auto gap-4 p-10 grid grid-cols-1 md:grid-cols-1 mt-20 mb-24 px-40'>
+      <div className='mx-auto gap-4 p-10 grid grid-cols-1 md:grid-cols-1 mt-20 mb-24 px-4 md:px-40'>
         {/* Language & Framework Section */}
         <div
           className='flex justify-center items-center flex-col mb-5'

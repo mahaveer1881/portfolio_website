@@ -35,6 +35,26 @@ function Profile() {
     );
   }, []);
 
+  useGSAP(() => {
+    gsap.fromTo(
+      '.image-an',
+      {
+        opacity: 0,
+        height: 0,
+        width: 0,
+        y: '100vh',
+      },
+      {
+        opacity: 1,
+        height: '80%',
+        width: '80%',
+        ease: 'power2.out',
+        duration: 1.5,
+        y: 0,
+      }
+    );
+  }, []);
+
   const scrollToContact = () => {
     const Element = document.getElementById('contactSection');
     if (Element) {
@@ -47,7 +67,7 @@ function Profile() {
         <div className='mx-auto grid grid-cols-1 md:grid-cols-5 gap-40 overflow-hidde md:w-[75%] w-full'>
           <div className='col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-start md:right-[10%]'>
             <div className='block md:hidden col-span-1 mt-32 mb-32'>
-              <div className='bg-slate-500 rounded-full h-60 w-60 grayscale-0 hover:grayscale-0 transition-all ease duration-300'>
+              <div className='image-ani bg-slate-500 rounded-full h-60 w-60 grayscale-0 hover:grayscale-0 transition-all ease duration-300'>
                 <span className='relative max-w-full h-full overflow-hidden'>
                   {/* <span className='block w-full h-full'>
                     <img
@@ -66,15 +86,15 @@ function Profile() {
               </div>
             </div>
             <p
-              className='uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray600'
+              className='name uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray600'
               style={{ opacity: 1, transform: 'none' }}
             >
               Mahaveer Singh Gurjar
             </p>
-            <h1 className='text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5'>
+            <h1 className='name text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5'>
               Full Stack <br /> Developer
             </h1>
-            <p>
+            <p className='name'>
               <a
                 className='text-xl mb-3 font-normal text tracking-[.5rem] text-gray600'
                 href='https://www.opendatafabric.com/'
@@ -85,7 +105,7 @@ function Profile() {
             </p>
             <p
               style={{ opacity: 1, transform: 'none' }}
-              className='title text-xl  2xl:text-xl mt-8 md:mt-4 px-6 md:px-0 tracking-wider text-gray600 leading-[1.7rem]'
+              className='name text-xl  2xl:text-xl mt-8 md:mt-4 px-6 md:px-0 tracking-wider text-gray600 leading-[1.7rem]'
             >
               I’m a Full Stack Developer, graduated from IIT Tirupati. I started
               with Frontend Development and now build end-to-end solutions.
@@ -97,7 +117,7 @@ function Profile() {
             >
               <button
                 onClick={handleResume}
-                className='title mr-3 w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border flex justify-center items-center gap-3'
+                className='name mr-3 w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border flex justify-center items-center gap-3'
               >
                 {isLoading ? (
                   <span>
@@ -112,9 +132,9 @@ function Profile() {
               </button>
               <button
                 onClick={scrollToContact}
-                className='title w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out transparent border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 box-border'
+                className='name w-[280px] rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out transparent border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 box-border'
               >
-                Contact Me
+                Open to Work
               </button>
             </div>
           </div>

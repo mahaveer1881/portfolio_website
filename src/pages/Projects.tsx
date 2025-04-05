@@ -52,11 +52,11 @@ function Projects() {
         </div>
       </div>
 
-      <div className='mx-40 flex justify-center items-center gap-2'>
+      <div className='mx-2 md:mx-40 flex justify-center items-center gap-2'>
         <button
           onClick={() => setProjectSection('personal')}
           className={cn(
-            'mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out border-transparent border-2 box-border font-semibold',
+            'mr-3 rounded-2xl px-2 md:px-8 py-2 shadow-md transition duration-300 ease-in-out border-transparent border-2 box-border font-semibold',
             projectSection === 'personal'
               ? 'bg-gray-700 text-gray-100'
               : 'border-gray-700'
@@ -67,7 +67,7 @@ function Projects() {
         <button
           onClick={() => setProjectSection('workplace')}
           className={cn(
-            'mr-3 rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out border-transparent border-2 box-border font-semibold',
+            'mr-3 rounded-2xl px:2 md:px-8 py-2 shadow-md transition duration-300 ease-in-out border-transparent border-2 box-border font-semibold',
             projectSection === 'workplace'
               ? 'bg-gray-700 text-gray-100'
               : 'border-gray-700'

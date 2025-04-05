@@ -3,8 +3,8 @@ import { BriefcaseBusiness } from 'lucide-react';
 
 function ExperienceSection() {
   return (
-    <div className='w-full px-20 mx-auto flex justify-center items-center flex-col'>
-      <div className='mt-16 flex flex-col justify-start items-center w-full pl-10 md:pl-32'>
+    <div className='w-full px-0 md:px-20 mx-auto flex justify-center items-center flex-col'>
+      <div className='mt-16 flex flex-col justify-start items-center w-full pl-4 md:pl-32'>
         <div className='flex justify-center items-center flex-col my-5 self-start'>
           <div
             className='bg-gray-700 w-28 h-1 rounded-full mb-3 self-start'
@@ -22,7 +22,7 @@ function ExperienceSection() {
           </h1>
         </div>
       </div>
-      <div className='mt-8 md:ml-8 ml-0 w-[80%] tracking-wider'>
+      <div className='mt-8 md:ml-8 ml-0 w-[90%] md:w-[80%] tracking-wider'>
         {homeExperience.map((item, index) => (
           <div key={index} className='flex items-start relative gap-6 '>
             <div className='flex flex-col items-center '>
