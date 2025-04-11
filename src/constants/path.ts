@@ -6,6 +6,9 @@ export const PATH_ROUTES = {
   CONTACT: '/contact',
   ABOUT: '/about',
   PROJECT_DESC: '/projects/details',
+  BLOGS: '/blogs',
 
   SITEMAP: 'sitemap.xml',
+
+  ERROR_COMPONENT: '*',
 };

@@ -14,9 +14,9 @@ export interface ProjectDataType {
   short_desc: string;
   desc: string;
   stack: string[];
-  image: string[];
-  live: string;
-  github: string;
+  image?: string[];
+  live?: string;
+  github?: string;
   year: string;
 }
 

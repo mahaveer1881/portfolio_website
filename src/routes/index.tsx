@@ -1,6 +1,8 @@
+import ErrorComponent from '@/components/ErrorComponent';
 import MainLayout from '@/components/layouts/MainLayout';
 import { PATH_ROUTES } from '@/constants/path';
 import About from '@/pages/About';
+import Blogs from '@/pages/Blogs';
 import Contact from '@/pages/Contact';
 import Experience from '@/pages/Experience';
 import Home from '@/pages/Home';
@@ -26,9 +28,12 @@ const routes = [
   { path: PATH_ROUTES.EXPERIENCE, element: <Experience /> },
   { path: PATH_ROUTES.ABOUT, element: <About /> },
   { path: PATH_ROUTES.PROJECT_DESC, element: <ProjectDesc /> },
+  { path: PATH_ROUTES.BLOGS, element: <Blogs /> },
 
   {
     path: PATH_ROUTES.SITEMAP,
     element: <Navigate to='/sitemap.xml' replace />,
   },
+
+  { path: PATH_ROUTES.ERROR_COMPONENT, element: <ErrorComponent /> },
 ];
