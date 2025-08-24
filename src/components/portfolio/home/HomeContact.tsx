@@ -1,14 +1,14 @@
-import Socials from '@/components/portfolio/Socials';
+import Socials from "@/components/portfolio/Socials";
 
 const HomeContact = () => {
   return (
     <div
-      className='section fp-section fp-table fp-is-overflow active fp-completely h-auto'
-      data-anchor='contact'
-      id='contactSection'
+      className="section fp-section fp-table fp-is-overflow active fp-completely h-auto"
+      data-anchor="contact"
+      id="contactSection"
     >
-      <div className='fp-overflow'>
-        <div className='relative md:h-screen w-screen gap-4 md:p-10 py-10 flex justify-center items-center overflow-hidden'>
+      <div className="fp-overflow">
+        <div className="relative md:h-screen w-screen gap-4 md:p-10 py-10 flex justify-center items-center overflow-hidden">
           {/* <div className='z-0 mb-48 md:mb-0 md:absolute top-1/4 md:right-[10%] md:-translate-y-16'>
             <div className='rounded-full h-[650px] w-[600px] lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300'>
               <span
@@ -54,32 +54,32 @@ const HomeContact = () => {
               </span>
             </div>
           </div> */}
-          <div className='z-10 w-full md:absolute md:w-auto top-[60%] md:top-1/3 flex flex-col justify-center items-center md:items-center text-center px-10 md:px-0 overflow-hidden'>
-            <h1 className='lg:bg-transparent bg-opacity-50 md:px-0 text-black text-4xl md:text-8xl font-bold mb-3'>
+          <div className="z-10 w-full md:absolute md:w-auto top-[60%] md:top-1/3 flex flex-col justify-center items-center md:items-center text-center px-10 md:px-0 overflow-hidden">
+            <h1 className="lg:bg-transparent bg-opacity-50 md:px-0 text-black text-4xl md:text-8xl font-bold mb-3">
               Get In Touch
             </h1>
-            <div className='flex justify-center items-center flex-col my-5'>
-              <div className='bg-gray-700 w-20 h-1 rounded-full mb-2' />
+            <div className="flex justify-center items-center flex-col my-5">
+              <div className="bg-gray-700 w-20 h-1 rounded-full mb-2" />
               <div
-                className='bg-gray-700 w-20 h-1 rounded-full'
-                style={{ transform: 'translateX(40px)' }}
+                className="bg-gray-700 w-20 h-1 rounded-full"
+                style={{ transform: "translateX(40px)" }}
               />
             </div>
-            <p className='title text-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] md:mb-5'>
-              Feel free to contact me if you have any{' '}
-              <span className='bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent'>
+            <p className="title text-lg md:text-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] md:mb-5">
+              Feel free to contact me if you have any{" "}
+              <span className="bg-transparent bg-opacity-50 xl:bg-transparent">
                 questions or just want to say hi.
               </span>
             </p>
-            <p className='title text-base tmd:ext-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] mb-5'>
-              <a href='mailto:mahaveersinghgurjar18@gmail.com?subject=Hello&body=Hello Mahaveer,'>
+            <p className="title text-base tmd:ext-xl mt-4 tracking-wider text-gray600 leading-[1.7rem] mb-5">
+              <a href="mailto:mahaveersinghgurjar18@gmail.com?subject=Hello&body=Hello Mahaveer,">
                 mahaveersinghgurjar18@gmail.com
               </a>
             </p>
-            <div className='flex justify-center items-center space-x-4'>
+            <div className="flex justify-center items-center space-x-4 mt-8 md:mt-0">
               <Socials
-                containerStyles='flex gap-3'
-                iconStyles='md:w-14 md:h-14 w-10 h-10 border-secondary rounded-full flex justify-center items-center text-secondary md:text-3xl text-2xl hover:bg-secondary hover:text-white hover:transition-all duration-500 '
+                containerStyles="flex gap-3"
+                iconStyles="md:w-14 md:h-14 w-10 h-10 border-secondary rounded-full flex justify-center items-center text-secondary md:text-3xl text-2xl hover:bg-secondary hover:text-white hover:transition-all duration-500 "
               />
             </div>
           </div>
