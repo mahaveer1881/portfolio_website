@@ -6,7 +6,6 @@ import ExperienceSection from "@/components/portfolio/about/ExperienceSection";
 import Tagline from "./Tagline";
 import AboutContact from "../components/portfolio/AboutContact";
 import HeroPageSection from "@/components/portfolio/HeroPageSection";
-import StatsCount from "@/components/portfolio/about/StatsCount";
 
 function About() {
   const scrollDown = () => {
