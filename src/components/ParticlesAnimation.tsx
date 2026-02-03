@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import Particles from '@tsparticles/react';
-import ParticlesConfig from '../config/particles-config';
-import ParticlesLoader from './ParticlesLoader';
-import { type Container } from '@tsparticles/engine';
+import { useEffect, useState } from "react";
+import Particles from "@tsparticles/react";
+import ParticlesConfig from "../config/particles-config";
+import ParticlesLoader from "./ParticlesLoader";
+import { type Container } from "@tsparticles/engine";
 
 const ParticlesAnimation = () => {
   const [init, setInit] = useState(false);
@@ -23,7 +23,7 @@ const ParticlesAnimation = () => {
         style={{
           background: `#10131a`,
         }}
-        id='tsparticles'
+        id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={ParticlesConfig()}
       />

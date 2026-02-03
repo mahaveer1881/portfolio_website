@@ -42,7 +42,10 @@ function ExperienceSection() {
       </div>
       <div className="mt-8 md:ml-8 ml-0 w-[90%] md:w-[80%] tracking-wider">
         {homeExperience.map((item, index) => (
-          <div key={index} className="flex items-start relative gap-6 mb-8">
+          <div
+            key={index}
+            className="flex items-start relative gap-2 md:gap-6 mb-8"
+          >
             <div className="flex flex-col items-center ">
               <p className="bg-secondary rounded-full w-8 h-8 text-center flex justify-center items-center">
                 <BriefcaseBusiness className="w-5 h-5 text-white" />
@@ -50,11 +53,13 @@ function ExperienceSection() {
               <div className="absolute left-3 top-10 lg:h-[85%] h-[93%] border-[0.5px] border-secondary/20 rounded-full "></div>
             </div>
             <div className="">
-              <h1 className="sm:text-xl text-base text-secondary font-semibold">
+              <h1 className="text-lg sm:text-xl text-secondary font-semibold">
                 {item.position}
               </h1>
-              <p className="text-gray600 font-semibold">{item.company}</p>
-              <div className="flex justify-start items-center gap-3">
+              <p className="text-sm md:text-base text-gray600 font-semibold">
+                {item.company}
+              </p>
+              <div className="flex-col md:flex justify-start items-center gap-3">
                 <p className="text-gray600 font-semibold">{item.duration}</p>
                 <span className="h-1.5 w-1.5 bg-gray-500 rounded-full" />
                 <p className="text-gray500 font-semibold italic">

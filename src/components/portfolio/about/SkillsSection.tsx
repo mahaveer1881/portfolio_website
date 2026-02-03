@@ -1,3 +1,5 @@
+import { aboutSkills } from "@/constants/about";
+
 function SkillsSection() {
   return (
     <div className="">
@@ -72,7 +74,7 @@ function SkillsSection() {
                   <path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"></path>
                   <path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"></path>
                 </svg>
-                <div className="font-medium">REST API</div>
+                <div className="font-medium">REST API Development</div>
               </div>
 
               <div className="flex flex-col items-center gap-2">
@@ -108,23 +110,9 @@ function SkillsSection() {
             Language &amp; Framework
           </h2>
           <p className="text-gray-500 text-center tracking-widest md:px-10">
-            <span className="text-black font-bold">HTML</span> |{" "}
-            <span className="text-black font-bold">CSS</span> |{" "}
-            <span className="text-black font-bold">Javascript</span> |{" "}
-            <span className="text-black font-bold">Typescript</span> |{" "}
-            <span className="text-black font-bold">React</span> |{" "}
-            <span className="text-black font-bold">NextJS</span> |{" "}
-            <span className="text-black font-bold">React Native</span> |{" "}
-            <span className="text-black font-bold">TailwindCSS</span> |{" "}
-            <span className="text-black font-bold">Bootstrap</span> |{" "}
-            <span className="text-black font-medium">NodeJS</span> |{" "}
-            <span className="text-black font-medium">ExpressJS</span> |{" "}
-            <span className="text-black font-bold">MySQL</span> |{" "}
-            <span className="text-black font-bold">PostgreSQL</span> |{" "}
-            <span className="text-black font-medium">MongoDB</span> |{" "}
-            <span className="text-black font-medium">Firebase</span> |{" "}
-            <span className="text-black font-medium">Python</span> |{" "}
-            <span className="text-black font-medium">AWS Cloud</span>
+            {aboutSkills.map((item) => (
+              <span className="text-black font-bold">{item} | </span>
+            ))}
           </p>
         </div>
 

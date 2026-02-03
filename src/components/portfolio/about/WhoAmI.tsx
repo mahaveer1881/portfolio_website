@@ -11,7 +11,7 @@ function WhoAmI() {
     >
       <ThreeImagesDisplay photo1={photo1} photo2={photo2} photo3={photo3} />
       <div
-        className="flex justify-center items-start flex-col mb-5 md:px-10 px-8"
+        className="flex justify-center items-start flex-col mb-5 md:px-10 pl-4 pr-8"
         style={{ opacity: 1, transform: "none" }}
       >
         <h2 className="text-2xl font-bold tracking-wider mb-3">
